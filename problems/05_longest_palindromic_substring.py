@@ -9,13 +9,11 @@ class Solution:
         return s1 == s2
 
     def longestPalindrome(self, s: str) -> str:
-        n = len(s)
-        if s == ''.join(reversed(list(s))):
-            return s
-        for i in reversed(range(1, n)):
-            combinations = list(zip(*[self.rotate(s, j) for j in range(i)]))
-            index = n-i+1
-            combinations = combinations[:index]
-            has_palindromes = [self.is_palindrome(word) for word in combinations]
+        word_length = len(s)
+        combinations = list(zip(*[self.rotate(s, i) for i in range(word_length)]))
+        for palindrome_length in reversed(range(1, word_length+1)): # for word lengths 1...n
+            has_palindromes = [self.is_palindrome(chars_tuple[:palindrome_length]) for chars_tuple in combinations[
+                                                                                                      :word_length-palindrome_length+1]]
             if True in has_palindromes:
-                return ''.join(combinations[has_palindromes.index(True)])
+                longest_palindrome = combinations[:word_length-palindrome_length+1][has_palindromes.index(True)]
+                return ''.join(longest_palindrome[:palindrome_length])
