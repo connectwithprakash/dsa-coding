@@ -6,26 +6,29 @@ class Solution:
     def find_even_odd_len_palindrome(self, word_length, combinations, palindrome_indices, palindrome_word, even=False):
         if even:
             start = 4
+            step = 1
         else:
             start = 5
-        longest_palindrome_length = start - 2
+            step = 1
         for palindrome_length in range(start, word_length + 1, 2):
             palindrome_new_indices = []
             for index in palindrome_indices:
-                search_index = index - 1
-                if search_index >= 0:
-                    end_index = word_length-search_index
-                    word = combinations[search_index][:end_index]
-                    if (palindrome_length <= end_index) and (word[0] == word[palindrome_length-1]):
-                        palindrome_new_indices.append(search_index)
-
-            if len(palindrome_new_indices):
+                new_index = index - step
+                if (new_index >= 0) and (new_index <= word_length - palindrome_length) and (
+                        index < word_length - step - 1):
+                    pass
+                else:
+                    continue
+                word = combinations[new_index]
+                if word[0] == word[palindrome_length - 1]:
+                    palindrome_new_indices.append(new_index)
+            if len(palindrome_new_indices) > 0 and (palindrome_length <= word_length):
                 palindrome_indices = palindrome_new_indices
-                longest_palindrome_length = palindrome_length
+                palindrome_word = combinations[palindrome_indices[0]][:palindrome_length]
             else:
+                palindrome_word = combinations[palindrome_indices[0]][:palindrome_length - 2]
                 break
-
-        return palindrome_indices[0], longest_palindrome_length
+        return ''.join(palindrome_word)
 
     def longestPalindrome(self, s: str) -> str:
         word_length = len(s)
@@ -35,22 +38,21 @@ class Solution:
         palindrome_new_indices = [index for index, word in enumerate(combinations[:word_length - 2]) if word[0] ==
                                   word[2]]
 
-        even_palindrome_len = odd_palindrome_len = 0
+        even_palindrome = odd_palindrome = ''
         if len(palindrome_indices) != 0:
             even_palindrome = combinations[palindrome_indices[0]][:2]
-            even_palindrome_index, even_palindrome_len = self.find_even_odd_len_palindrome(word_length, combinations,
-                                                                           palindrome_indices,
+            even_palindrome = self.find_even_odd_len_palindrome(word_length, combinations, palindrome_indices,
                                                                 even_palindrome, True)
         if len(palindrome_new_indices) != 0:
             odd_palindrome = combinations[palindrome_new_indices[0]][:3]
-            odd_palindrome_index, odd_palindrome_len = self.find_even_odd_len_palindrome(word_length, combinations,
-                                                                                        palindrome_new_indices,
+            odd_palindrome = self.find_even_odd_len_palindrome(word_length, combinations, palindrome_new_indices,
                                                                odd_palindrome, False)
-        if even_palindrome_len > odd_palindrome_len:
-            palindrome_word = combinations[even_palindrome_index][:even_palindrome_len]
-        elif odd_palindrome_len:
-            palindrome_word = combinations[odd_palindrome_index][:odd_palindrome_len]
+
+        if len(even_palindrome) > len(odd_palindrome):
+            palindrome_word = even_palindrome
+        elif len(odd_palindrome):
+            palindrome_word = odd_palindrome
         else:
             palindrome_word = combinations[0][0]
 
-        return ''.join(palindrome_word)
+        return palindrome_word
