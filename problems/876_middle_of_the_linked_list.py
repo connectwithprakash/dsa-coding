@@ -12,11 +12,9 @@ class Solution:
             count += 1
             temp = temp.next
 
-        middle = ((count//2)+1)
-        count = 0
         temp = head
 
-        for i in range(middle-1):
+        for i in range(count//2):
             temp = temp.next
 
         return temp
