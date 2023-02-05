@@ -6,10 +6,9 @@
 
 class Solution:
     def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        visited = []
         while head is not None:
-            if head not in visited:
-                visited.append(head)
+            if head.val is not None:
+                head.val = None
                 head = head.next
             else:
                 break
