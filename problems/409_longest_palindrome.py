@@ -1,3 +1,20 @@
+"""
+# Length of longest palindrome
+
+# Intuition
+The problem seemed to be finding what charactes are repeated and create a palindrome out of it.
+
+# Approach
+Create a hash map to store the count of character that we have already seen. We loop through the characters in the string. We check if we have already seen that character and increase the count in either cases. We also see if the character has been repeated two times. If yes, we add it to the palindrome list and reset the count to zero.
+
+At last, we look into hast map and see if there is any character that has been repeated just one time. If yes, we return the longest palindrome length as two times the length of repeated characters plus one, else, just two times the length of repeated characters.
+
+# Complexity
+- Time complexity: $$O(n)$$
+
+- Space complexity: $$O(1)$$
+"""
+
 class Solution:
     def longestPalindrome(self, s: str) -> int:
         hash_map = {}
