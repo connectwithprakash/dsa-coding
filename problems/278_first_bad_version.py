@@ -10,11 +10,10 @@ class Solution:
             if isBadVersion(mid):
                 if mid == 0:
                     break
+                elif isBadVersion(mid-1):
+                    end = mid - 1
                 else:
-                    if isBadVersion(mid-1):
-                        end = mid - 1
-                    else:
-                        break
+                    break
             else:
                 start = mid+1
 
