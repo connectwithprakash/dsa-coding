@@ -4,6 +4,8 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+
 class Solution:
     def inOrderTraversal(self, root, prev_val, prev_is_valid):
         if not prev_is_valid:
