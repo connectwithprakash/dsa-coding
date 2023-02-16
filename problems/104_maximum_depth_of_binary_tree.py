@@ -4,6 +4,16 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+"""
+Another minimal code solution:
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        if node is None:
+            return 0
+
+        return 1+max(self.maxDepthhelper(root.left), self.maxDepth(root.right))
+"""
+
 
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
