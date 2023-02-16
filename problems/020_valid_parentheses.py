@@ -16,3 +16,12 @@ class Solution:
         else:
             return True
 
+
+if __name__ == "__main__":
+    assert (Solution().isValid("]") == False)
+    assert (Solution().isValid("[") == False)
+    assert (Solution().isValid("()") == True)
+    assert (Solution().isValid("()[]{}") == True)
+    assert (Solution().isValid('{]') == False)
+    assert (Solution().isValid('[{(){[]()}}]') == True)
+
