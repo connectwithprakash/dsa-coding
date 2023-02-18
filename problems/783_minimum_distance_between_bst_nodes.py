@@ -6,23 +6,17 @@
 #         self.right = right
 
 class Solution:
+    min_distance = float("inf")
+    prev_val = - float("inf")
+
     def minDiffInBST(self, root: Optional[TreeNode]) -> int:
-        def inorder(node, sorted_arr):
-            if node.left:
-                inorder(node.left, sorted_arr)
-            sorted_arr.append(node.val)
-            if node.right:
-                inorder(node.right, sorted_arr)
-
-            return sorted_arr
-
-        sorted_arr = inorder(root, [])
-        min_distance = float("inf")
+        if not root:
+            return
+        self.minDiffInBST(root.left)
+        if (root.val - self.prev_val) < self.min_distance:
+            self.min_distance = (root.val - self.prev_val)
+        self.prev_val = root.val
+        self.minDiffInBST(root.right)
         
-        for j in range(1, len(sorted_arr)):
-            local_min = (sorted_arr[j] - sorted_arr[j-1])
-            if local_min < min_distance:
-                min_distance = local_min
-
-        return min_distance
+        return self.min_distance
 
