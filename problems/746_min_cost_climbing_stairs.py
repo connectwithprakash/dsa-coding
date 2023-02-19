@@ -1,3 +1,6 @@
+"""
+Solution with memoization
+
 class Solution:
     def minCostClimbingStairs(self, cost: List[int]) -> int:
         dp = {}
@@ -11,4 +14,15 @@ class Solution:
 
             return min(cost[n-1]+dp[n-1], cost[n-2]+dp[n-2])
         return helper(len(cost))
+"""
+
+# O(1) space complexity solution
+class Solution:
+    def minCostClimbingStairs(self, cost: List[int]) -> int:
+        for i in range(2, len(cost)+1):
+            previous_cost = min(cost[i-1], cost[i-2])
+            if i < len(cost):
+                cost[i] = cost[i] + previous_cost
+        
+        return previous_cost
 
