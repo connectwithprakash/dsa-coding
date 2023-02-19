@@ -1,14 +1,13 @@
 class Solution:
     dp = {}
     def climbStairs(self, n: int) -> int:
-        if (n==0):
-            return 1
-        elif (n < 0):
-            return 0
+        if (n < 3):
+            return n
         else:
-            if (n-1) not in self.dp:
-                self.dp[n-1] = self.climbStairs(n-1)
-            if (n-2) not in self.dp:
-                self.dp[n-2] = self.climbStairs(n-2)
-            return  self.dp[n-1] + self.dp[n-2]
+            minus1 = 2
+            minus2 = 1
+        for i in range(3, n+1):
+            minus1, minus2 = minus1 + minus2, minus1
+
+        return minus1
 
