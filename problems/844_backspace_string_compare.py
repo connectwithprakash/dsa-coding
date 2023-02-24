@@ -4,21 +4,30 @@ class Solution:
 
         def get_next_char_index(string, index):
             count = 0
-            while (index > -1) and (string[index] == '#'):
-                if string[index-1] == '#':
-                    count += 1
-                    index -= 1
+            non_pound_seen = False
+            while (index > -1):
+                if (string[index] != '#'):
+                    if (count == 0):
+                        break
+                    else:
+                        index -= 1
+                        count -= 1
+                        non_pound_seen = True
                 else:
-                    index -= 2
-            print('next -> ',string, index, count)
-            return (index - count)
+                    if non_pound_seen:
+                        count = 1
+                        non_pound_seen = False
+                    else:
+                        count += 1
+                        index -= 1
+            return index
 
         while (i>-1) and (j>-1):
-            if (s[i] == '#') or (t[j] == '#'):
+            if (s[i] == '#'):
                 i = get_next_char_index(s, i)
+            if (t[j] == '#'):
                 j = get_next_char_index(t, j)
-                print(i, j)
-            elif s[i] == t[j]:
+            if s[i] == t[j]:
                 i -= 1
                 j -= 1
             else:
