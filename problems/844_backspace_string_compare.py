@@ -1,36 +1,18 @@
 class Solution:
     def backspaceCompare(self, s: str, t: str) -> bool:
-        i, j = len(s)-1, len(t)-1
-
-        def get_next_char_index(string, index):
-            count = 0
-            non_pound_seen = False
-            while (index > -1):
-                if (string[index] != '#'):
-                    if (count == 0):
-                        break
-                    else:
-                        index -= 1
-                        count -= 1
-                        non_pound_seen = True
+        def get_text(text: str) -> str:
+            cursor = 0
+            text = list(text)
+            for i in range(len(text)):
+                if text[i] != '#':
+                    text[cursor] = text[i]
+                    cursor += 1
                 else:
-                    if non_pound_seen:
-                        count = 1
-                        non_pound_seen = False
-                    else:
-                        count += 1
-                        index -= 1
-            return index
+                    cursor = max(0, cursor-1)
+            return "".join(text[:cursor])
 
-        while (i>-1) and (j>-1):
-            if (s[i] == '#'):
-                i = get_next_char_index(s, i)
-            if (t[j] == '#'):
-                j = get_next_char_index(t, j)
-            if s[i] == t[j]:
-                i -= 1
-                j -= 1
-            else:
-                break
-        return (i == j)
+        s = get_text(s)
+        t = get_text(t)
+
+        return (s==t)
 
