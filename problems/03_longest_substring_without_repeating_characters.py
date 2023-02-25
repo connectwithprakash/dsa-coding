@@ -1,3 +1,5 @@
+# Solution 1: O(n^2) time complexity and O(n) space complexity
+
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         head = idx = longest_len_count = 0
@@ -23,13 +25,24 @@ class Solution:
         
         return longest_substring_len
         
-        # # Testing window method
-        # max_len = 0
-        # for i in range(1, len(s)+1):
-        #     for j in range(0, len(s)-i+1):
-        #         substring = s[j:j+i]
-        #         substring_len = len(substring)
-        #         if len(set(substring)) == substring_len:
-        #             if substring_len>max_len:
-        #                 max_len = substring_len
-        # return max_len
+
+# Solution 2: O(n^2) time complexity and O(n) space complexity
+
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        head, tail = 0, 0
+        max_len = (len(s) & True)
+
+        for tail in range(len(s)):
+            if s[tail] in s[head:tail]:
+                substring_len = (tail - head)
+                while (s[head] != s[tail]):
+                    head += 1
+                head += 1
+            else:
+                substring_len = ((tail + 1) - head)
+            if substring_len > max_len:
+                max_len = substring_len
+
+        return max_len
+
