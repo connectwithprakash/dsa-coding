@@ -1,3 +1,5 @@
+# O(n^2) time complexity
+
 class Solution:
     
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -18,4 +20,17 @@ class Solution:
                 #x_idx = y_idx - count
                 break
         return [x_idx,y_idx]
+
+
+# Less than O(n^2) solution
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hash_map = {}
+
+        for index in range(len(nums)):
+            if nums[index] in hash_map:
+                return [hash_map[nums[index]], index]
+            else:
+                hash_map[(target - nums[index])] = index
 
