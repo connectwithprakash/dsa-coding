@@ -18,12 +18,4 @@ class Solution:
                 #x_idx = y_idx - count
                 break
         return [x_idx,y_idx]
-        '''
-        for i,f in enumerate(nums):
-            temp = nums
-            temp[i] = 10000
-            for j,s in enumerate(temp):
-                if f+s == target:
-                    return [i, j]
-        
-        '''
+
