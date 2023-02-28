@@ -1,19 +1,21 @@
 class Solution:
     def decodeString(self, s: str) -> str:
         def recursion(index):
-            repeats = []
             result = []
+            repeat = ""
             while index < len(s):
                 if (s[index] == '['):
-                    repeat = result.pop()
                     index, rec_result = recursion(index+1)
-                    rec_result *= eval(repeat)
-                    result += rec_result
+                    result += (rec_result *eval(repeat))
+                    repeat = ""
                 elif (s[index] == ']'):
                     return index, result
                 else:
-                    result.append(s[index])
-
+                    if s[index].isalpha():
+                        result.append(s[index])
+                    else:
+                        repeat += s[index]
+                
                 index += 1
 
             return index, result
