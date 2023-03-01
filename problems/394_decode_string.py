@@ -6,7 +6,7 @@ class Solution:
             while index < len(s):
                 if (s[index] == '['):
                     index, rec_result = recursion(index+1)
-                    result += (rec_result *eval(repeat))
+                    result += (rec_result *int(repeat))
                     repeat = ""
                 elif (s[index] == ']'):
                     return index, result
