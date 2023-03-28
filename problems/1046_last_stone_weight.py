@@ -29,3 +29,19 @@ class Solution:
             return 0
 
 
+# Attempt 3: Using heap
+# O(n) time complexity and O(1) space complexity solution
+class Solution:
+    def lastStoneWeight(self, stones: List[int]) -> int:
+        stones = [-stone for stone in stones]
+        heapq.heapify(stones)
+
+        while len(stones) > 1:
+            diff = heapq.heappop(stones) - heapq.heappop(stones)
+            if (diff < 0):
+                heapq.heappush(stones, diff)
+
+        if len(stones):
+            return -stones[0]
+        else:
+            return 0
