@@ -19,3 +19,17 @@ class Solution:
         
             return sub_tree
 
+# Second attempt: nlong(n) solution
+class Solution:
+    def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
+        sub_tree = None
+        if root:
+            if (root.val == val):
+                sub_tree = root
+            elif (val < root.val):
+                sub_tree = self.searchBST(root.left, val)
+            elif (val > root.val):
+                sub_tree = self.searchBST(root.right, val)
+        
+        return sub_tree
+
