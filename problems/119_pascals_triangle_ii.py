@@ -13,3 +13,13 @@ class Solution:
 
         return prev_row_vals
 
+
+# Compact code
+class Solution:
+    def getRow(self, rowIndex: int) -> List[int]:
+        row_vals = [1]
+        for i in range(1, rowIndex+1):
+            row_vals = [1] + [(row_vals[j] +row_vals[j+1]) for j in range(len(row_vals)-1)] + [1]
+
+        return row_vals
+
