@@ -18,3 +18,27 @@ class Solution:
             return temp * pow(n - (i//2))
         return pow(n)
 
+# Attempt 2: With memoization
+class Solution:
+    def myPow(self, x: float, n: int) -> float:
+        if n < 0:
+            x = 1/x
+            n = -n
+        dp = {
+            0: 1,
+            1: x
+        }
+
+        def pow(n):
+            if n in dp:
+                return dp[n]
+            temp = x
+            i = 2
+            while (i <= n):
+                print("i: ", i, " temp: ", temp)
+                temp *= temp
+                dp[i] = temp
+                i *= 2
+            return temp * pow(n - (i//2))
+        return pow(n)
+
