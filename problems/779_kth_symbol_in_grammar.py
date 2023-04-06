@@ -1,3 +1,4 @@
+# Attempt 1
 class Solution:
     def kthGrammar(self, n: int, k: int) -> int:
         # n=1: 0
@@ -15,4 +16,17 @@ class Solution:
                 return 1^self.kthGrammar(n-1, k//2)
             else:
                 return 1^self.kthGrammar(n, k - max_cap)            
+
+
+# Attempt 2: Cleaner solution
+class Solution:
+    def kthGrammar(self, n: int, k: int) -> int:
+        if (k == 1):
+            return 0
+        else:
+            size = (2**(n-1)) // 2
+            if (k <= size):
+                return self.kthGrammar(n-1, k)
+            else:
+                return 1^self.kthGrammar(n-1, k - size)          
 
