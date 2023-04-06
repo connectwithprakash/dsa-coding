@@ -5,12 +5,16 @@ class Solution:
         # n=3: 0110
         # n=4: 01101001
         # n=5: 0110100110010110
-        dp = [0, 1, 1, 0, 1]
-        def helper(k):
-            if (k < 6):
-                return dp[k-1]
+        if (k == 1):
+            return 0
+        elif (k == 2):
+            return 1
+        else:
+            max_cap = 2**(n-1)
+            if (k < max_cap):
+                return self.kthGrammar(n-1, k)
+            elif (k == max_cap):
+                return 1^self.kthGrammar(n-1, k//2)
             else:
-                return 1 if helper(k//2) == 0 else 0
-
-        return helper(k)
+                return 1^self.kthGrammar(n, k - max_cap)
  
