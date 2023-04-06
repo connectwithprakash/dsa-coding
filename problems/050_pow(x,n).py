@@ -42,3 +42,24 @@ class Solution:
             return temp * pow(n - (i//2))
         return pow(n)
 
+
+# Attempt 3: Improved solution
+class Solution:
+    def myPow(self, x: float, n: int) -> float:
+        if (n < 0):
+            n = -n
+            x = 1/x
+        
+        def helper(n):
+            if (n == 0):
+                return 1
+            elif (n == 1):
+                return x
+            else:
+                pow = helper(n//2)
+                pow *= pow
+                if (n % 2) == 1:
+                    pow *= x
+                return pow
+        return helper(n)
+
