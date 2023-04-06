@@ -7,8 +7,6 @@ class Solution:
         # n=5: 0110100110010110
         if (k == 1):
             return 0
-        elif (k == 2):
-            return 1
         else:
             max_cap = 2**(n-1)
             if (k < max_cap):
@@ -16,5 +14,5 @@ class Solution:
             elif (k == max_cap):
                 return 1^self.kthGrammar(n-1, k//2)
             else:
-                return 1^self.kthGrammar(n, k - max_cap)
- 
+                return 1^self.kthGrammar(n, k - max_cap)            
+
