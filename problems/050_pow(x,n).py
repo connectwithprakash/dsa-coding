@@ -43,7 +43,7 @@ class Solution:
         return pow(n)
 
 
-# Attempt 3: Improved solution
+# Attempt 3: Improved solution using tail recursion
 class Solution:
     def myPow(self, x: float, n: int) -> float:
         if (n < 0):
