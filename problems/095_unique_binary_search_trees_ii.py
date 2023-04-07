@@ -13,12 +13,9 @@ class Solution:
             
             trees = []
             for i in range(p, q+1):
-                root = TreeNode(i)
                 for left_tree in helper(p, i-1):
                     for right_tree in helper(i+1, q):
-			root = deepcopy(root)
-                        root.left = left_tree
-                        root.right = right_tree
+                        root = TreeNode(i, left_tree, right_tree)
                         trees.append(root)
             return trees
         
