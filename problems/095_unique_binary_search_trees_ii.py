@@ -16,6 +16,7 @@ class Solution:
                 root = TreeNode(i)
                 for left_tree in helper(p, i-1):
                     for right_tree in helper(i+1, q):
+			root = deepcopy(root)
                         root.left = left_tree
                         root.right = right_tree
                         trees.append(root)
