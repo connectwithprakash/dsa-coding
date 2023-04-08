@@ -10,6 +10,8 @@ class Solution:
         def helper(p, q):
             if p > q:
                 return [None]
+            elif (p == q):
+                return [TreeNode(p)]
             
             trees = []
             for i in range(p, q+1):
