@@ -1,3 +1,4 @@
+# Attempt 1: Solution similar to "Backspace String Compare".
 class Solution:
     def removeStars(self, s: str) -> str:
         j = len(s) - 1
