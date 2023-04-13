@@ -37,3 +37,17 @@ class Solution:
 
         return len(stack) == 0         
 
+
+# Efficient solution 2: O(n) space and time complexity
+class Solution:
+    def validateStackSequences(self, pushed: List[int], popped: List[int]) -> bool:
+        i, j = 0, 0
+        for x in pushed:
+            pushed[i] = x
+            while (i > -1) and (pushed[i] == popped[j]):
+                i -= 1
+                j += 1
+            i += 1
+
+        return (i == 0)
+
