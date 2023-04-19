@@ -9,6 +9,7 @@
 # Brute-force solution
 class Solution:
     def longestZigZag(self, root: Optional[TreeNode]) -> int:
+	# Go ZigZag traversal
         def helper(node, direction):
             print(node.val, direction)
             if node.right and (direction == "left"):
@@ -17,7 +18,7 @@ class Solution:
                 return 1 + helper(node.left, "left")
             else:
                 return 1
-
+	# DFS
         def traversal(node, direction):
             ll_path, lr_path, mid_path = 0, 0, 0
             if node.left:
