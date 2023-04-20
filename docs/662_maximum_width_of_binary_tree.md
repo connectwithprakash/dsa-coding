@@ -1,3 +1,5 @@
+# [Python | Beats 100%] Simple and efficient solution to "Maximum Width of Binary Tree"
+
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
 My idea was to capture the start and end index in an array of the nodes at each level and subtract the index of left most node from the right most node and add 1 to get the level width.
