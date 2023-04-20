@@ -31,3 +31,28 @@ class Solution:
 
         return traversal(root, "root")
 
+
+# Efficient O(n) solution
+class Solution:
+    def longestZigZag(self, root: Optional[TreeNode]) -> int:
+        self.max_path_len = 0
+
+        def traversal(node, dir, path_len):
+            self.max_path_len = max(self.max_path_len, path_len)
+            
+            if node.left is not None:
+                if dir != "left":
+                    traversal(node.left, "left", path_len+1)
+                else:
+                    traversal(node.left, "left", 1)
+
+            if node.right is not None:
+                if dir != "right":
+                    traversal(node.right, "right", path_len+1)
+                else:
+                    traversal(node.right, "right", 1)
+
+        traversal(root, "root", 0)
+
+        return self.max_path_len
+
