@@ -19,15 +19,13 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         offset = 0
-        rem_n = len(nums)
         n = len(nums)
         while True:
-            k = k % rem_n
+            k = k % (n - offset)
             if k == 0:
                 break
             for i in range(n-k, n):
-                new_i = ((i+k)%n)+offset
-                nums[new_i], nums[i] = nums[i], nums[new_i]
-            rem_n = rem_n-k
+                swap_i = ((i + k) % n) + offset
+                nums[swap_i], nums[i] = nums[i], nums[swap_i]
             offset += k
 
