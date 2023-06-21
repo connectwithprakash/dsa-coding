@@ -5,9 +5,7 @@ class Solution:
         for i in range(1, len(prices)):
             if prices[i] > prev_stock:
                 total_stock += prices[i] - prev_stock
-                prev_stock = prices[i]
-            else:
-                prev_stock = prices[i]
+            prev_stock = prices[i]
 
         return total_stock
 
