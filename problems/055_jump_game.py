@@ -1,31 +1,21 @@
-## DP solution
+# Naive solution - needs refactoring
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
         n = len(nums)
-        dp = [[0]*n for _ in range(n)]
-
-        # Populating DP table
-        for i in range(n):
-            idx_val = nums[i]
-            for k in range(idx_val+1):
-                j = i+k
-                if j < n:
-                    dp[i][j] = k
-                else:
-                    break
-        # Backtracking result
-        def helper(j):
-            if j == 0:
+        nums[-1] = 1
+        
+        def helper(j, step):
+            # Handles base case
+            if (j == 0):
                 return True
+            # Handles lookbask index
+            elif ((j-step) < 0):
+                return False
+            # If the step that needs to be taken is greater than possible step
+            if step > nums[j-step]:
+                return helper(j, step+1)
+            else:
+                return helper(j-step, 1)
 
-            for i in range(j):
-                if dp[i][j] > 0:
-                    val = dp[i][j]
-                    return helper(j-val)
-                else:
-                    continue
-                    
-            return False
-
-        return helper(n-1)
+        return helper(n-1, 1)
 
