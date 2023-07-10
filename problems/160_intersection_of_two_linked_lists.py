@@ -4,6 +4,7 @@
 #         self.val = x
 #         self.next = None
 
+# Naive solution: O(m+n+m)
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
         temp1 = headA
@@ -24,4 +25,21 @@ class Solution:
             return temp2
         else:
             return None
+
+
+# Better solution: O(m+n)
+class Solution:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
+       temp1, temp2 = headA, headB
+        while (temp1 is not temp2):
+            if temp1:
+                temp1 = temp1.next
+            else:
+                temp1 = headB
+            if temp2:
+                temp2 = temp2.next
+            else:
+                temp2 = headA
+
+        return temp1
 
