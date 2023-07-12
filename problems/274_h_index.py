@@ -1,13 +1,14 @@
 class Solution:
     def hIndex(self, citations: List[int]) -> int:
-        max_h = len(citations)
-        for h in range(max_h, 0, -1):
-            count = 0
-            for citation in citations:
-                if citation >= h:
-                    count += 1
-            if count >= h:
+        # Sort the citations in decending order
+        citations.sort(reverse=True)
+        # find the maximum x >= y point on the x=y line
+        h_index = 0
+        for citation in citations:
+            if citation > h_index:
+               h_index += 1
+            else:
                 break
 
-        return min(count, h)
+        return h_index
 
