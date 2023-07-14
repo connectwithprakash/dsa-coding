@@ -14,18 +14,17 @@ class RandomizedSet:
     def remove(self, val: int) -> bool:
         if val in self.index_map:
             idx = self.index_map[val]
+            last_val = self.values[-1]
+            self.values[idx] = last_val
+            self.index_map[last_val] = idx
+            self.values.pop()
             del self.index_map[val]
-            last_val = self.values.pop()
-            if idx != len(self.values):
-                self.values[idx] = last_val
-                self.index_map[self.values[idx]] = idx
             return True
         else:
             return False
     
     def getRandom(self) -> int:
-        rand_idx = random.randint(0, len(self.values)-1)
-        return self.values[rand_idx]
+        return random.choice(self.values)
 
 
 
@@ -34,3 +33,4 @@ class RandomizedSet:
 # param_1 = obj.insert(val)
 # param_2 = obj.remove(val)
 # param_3 = obj.getRandom()
+
