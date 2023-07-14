@@ -1,30 +1,25 @@
 class RandomizedSet:
-
     def __init__(self):
-        self.data = set()
+        self.data = {}
 
     def insert(self, val: int) -> bool:
-        if val in self.data:
+        if self.data.get(val, False):
             return False
         else:
-            self.data.add(val)
+            self.data[val] = True
             return True
-        
-
+    
     def remove(self, val: int) -> bool:
-        if val in self.data:
-            self.data.remove(val)
+        if self.data.get(val, False):
+            self.data.pop(val)
             return True
         else:
             return False
-
+    
     def getRandom(self) -> int:
         idx = 0
         rand_idx = random.randint(0, len(self.data)-1)
-        for val in self.data:
-            if idx == rand_idx:
-                return val
-            idx += 1
+        return list(self.data.keys())[rand_idx]
 
 
 
