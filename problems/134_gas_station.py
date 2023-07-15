@@ -1,5 +1,8 @@
 class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
+        if sum(gas) < sum(cost):
+            return -1
+
         n_pass = 0
         step = -1
         total_gas = 0
@@ -22,6 +25,4 @@ class Solution:
 
             if n_pass == n:
                 return start_pos
-            
-        return -1 
 
