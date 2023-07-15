@@ -1,17 +1,27 @@
 class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
-        start_pos = 0
-        while start_pos < len(gas):
-            total_gas = 0
-            for idx in range(len(gas)+1):
-                current_pos = (start_pos + idx) % len(gas)
-                total_gas += gas[current_pos]
-                if total_gas >= cost[current_pos]:
-                    total_gas -= cost[current_pos]
-                else:
-                    break
-            if (start_pos == current_pos) and (idx == len(gas)):
+        n_pass = 0
+        step = -1
+        total_gas = 0
+        n = len(gas)
+        max_step = 2*n
+        start_pos = None
+
+        while (step < max_step):
+            step += 1
+            idx = step % n
+            total_gas += (gas[idx] - cost[idx])
+            if total_gas < 0:
+                start_pos = None
+                total_gas = 0
+                n_pass = 0
+            else:
+                if start_pos is None:
+                    start_pos = idx
+                n_pass += 1
+
+            if n_pass == n:
                 return start_pos
-            start_pos += 1
-        return -1
+            
+        return -1 
 
