@@ -7,10 +7,9 @@ class Solution:
         step = -1
         total_gas = 0
         n = len(gas)
-        max_step = 2*n
         start_pos = None
 
-        while (step < max_step):
+        while (step < n):
             step += 1
             idx = step % n
             total_gas += (gas[idx] - cost[idx])
@@ -23,6 +22,5 @@ class Solution:
                     start_pos = idx
                 n_pass += 1
 
-            if n_pass == n:
-                return start_pos
+        return start_pos
 
