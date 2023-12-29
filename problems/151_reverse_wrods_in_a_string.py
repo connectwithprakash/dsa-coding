@@ -11,7 +11,7 @@ class Solution:
         n = len(s)
         start_idx = 0
         start_word = False
-        res_s = []
+        res_s = ''
         for i in range(n):
             if not start_word and s[i] != ' ':
                 start_word = True
@@ -20,11 +20,10 @@ class Solution:
             if start_word:
                 if s[i] == ' ':
                     start_word = False
-                    res_s.append(s[start_idx:i])
+                    res_s = s[start_idx:i] + ' ' + res_s
                 elif i == n-1:
                     start_word = False
-                    res_s.append(s[start_idx:])
+                    res_s = s[start_idx:] + ' ' + res_s
 
-        # if start_word
-        return ' '.join(res_s[::-1])
+        return res_s[:-1]
 
