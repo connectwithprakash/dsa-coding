@@ -1,5 +1,4 @@
 # Attempt 1: Pythonic solution
-
 class Solution:
     def reverseWords(self, s: str) -> str:
         return ' '.join(s.split()[::-1])
@@ -9,21 +8,21 @@ class Solution:
 class Solution:
     def reverseWords(self, s: str) -> str:
         n = len(s)
-        start_idx = 0
+        jdx = 0
         start_word = False
         res_s = ''
-        for i in range(n):
-            if not start_word and s[i] != ' ':
+        for idx in range(n-1, -1, -1):
+            if not start_word and s[idx] != ' ':
                 start_word = True
-                start_idx = i
+                jdx = idx+1
             
             if start_word:
-                if s[i] == ' ':
+                if s[idx] == ' ':
                     start_word = False
-                    res_s = s[start_idx:i] + ' ' + res_s
-                elif i == n-1:
+                    res_s += s[idx+1:jdx] + ' '
+                elif idx == 0:
                     start_word = False
-                    res_s = s[start_idx:] + ' ' + res_s
+                    res_s += s[:jdx] + ' '
 
         return res_s[:-1]
 
