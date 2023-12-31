@@ -15,14 +15,15 @@ class Solution:
             if idx == 0:
                 zigzag = False
 
-            if idx >= 0 and not zigzag:
+            if not zigzag:
                 data[idx].append(char)
                 idx += 1
-            elif zigzag and idx > 0:
+            elif zigzag:
                 data[idx].append(char)
                 idx -= 1
 
         for i in range(numRows):
             data[i] = "".join(data[i])
+
         return "".join(data)
 
