@@ -47,7 +47,7 @@ class Solution:
         n = len(nums)
         three_sums = set()
         nums = sorted(nums)
-        
+
         def twoSums(nums, target):
             hashmap = {}
             two_sums = []
@@ -59,11 +59,13 @@ class Solution:
                     hashmap[rem_val] = nums[idx]
             return two_sums
 
+        prev = None
         for idx in range(n):
-            two_sums = twoSums(nums[idx+1:], -nums[idx])
-            for two_sum in two_sums:
-                three_nums = (nums[idx], two_sum[0], two_sum[1])
-                three_sums.add(three_nums)
-        
-        return three_sums
+            if nums[idx] != prev: # Do not search for three sum if it has been already found
+                two_sums = twoSums(nums[idx+1:], -nums[idx])
+                for two_sum in two_sums:
+                    three_nums = (nums[idx], two_sum[0], two_sum[1])
+                    three_sums.add(three_nums)
+                prev = nums[idx]
 
+        return three_sums
