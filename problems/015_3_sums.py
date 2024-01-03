@@ -14,7 +14,7 @@ class Solution:
         return three_sums
 
 
-# Attempt 2: Breaking into sub problems O(n^2)
+# Attempt 2: Breaking into sub problems still O(n^3) because of the look up in the three sum list.
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         n = len(nums)
