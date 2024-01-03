@@ -69,3 +69,36 @@ class Solution:
                 prev = nums[idx]
 
         return three_sums
+
+# Attempt 4: Faster O(n^2) solution using two pointers instead of hashmap to lower space complexity
+class Solution:
+    def twoSums(self, nums, target):
+            idx, jdx = 0, len(nums)-1
+            two_sums = []
+            while idx<jdx:
+                two_sum = nums[idx]+nums[jdx]
+                if two_sum == target:
+                    two_sums.append((nums[idx], nums[jdx]))
+                    idx += 1
+                elif two_sum > target:
+                    jdx -= 1
+                else:
+                    idx += 1
+            return two_sums
+
+    
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        three_sums = set()
+        nums = sorted(nums)
+        
+        prev = None
+        for idx in range(len(nums)):
+            if nums[idx] != prev:
+                two_sums = self.twoSums(nums[idx+1:], -nums[idx])
+                for two_sum in two_sums:
+                    three_nums = (nums[idx], two_sum[0], two_sum[1])
+                    three_sums.add(three_nums)
+                prev = nums[idx]
+        
+        return three_sums
+
