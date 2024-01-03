@@ -41,3 +41,29 @@ class Solution:
         
         return three_sums
 
+# Attempt 3: O(n^2) solution
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        n = len(nums)
+        three_sums = set()
+        nums = sorted(nums)
+        
+        def twoSums(nums, target):
+            hashmap = {}
+            two_sums = []
+            for idx in range(len(nums)):
+                rem_val = (target-nums[idx])
+                if nums[idx] in hashmap:
+                    two_sums.append((nums[idx], hashmap[nums[idx]]))
+                else:
+                    hashmap[rem_val] = nums[idx]
+            return two_sums
+
+        for idx in range(n):
+            two_sums = twoSums(nums[idx+1:], -nums[idx])
+            for two_sum in two_sums:
+                three_nums = (nums[idx], two_sum[0], two_sum[1])
+                three_sums.add(three_nums)
+        
+        return three_sums
+
