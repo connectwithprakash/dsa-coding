@@ -57,3 +57,29 @@ class Solution:
 
         return min_len
 
+
+# Attempt 4: O(n) efficient solution
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        n = len(nums)
+        idx, jdx = 0, 0 # Pointers defining the window
+        win_sum = 0
+        min_len = n+1
+        while idx <= jdx and jdx < n:
+            win_sum += nums[jdx] # Increamentally accumulate the sum
+            if win_sum >= target: # We have found the sum for idx
+                min_len = min(min_len, jdx-idx+1)
+                # Now we can look for (idx+1)th position for the window
+                # But also jdx position might itself contribute to >= target value
+                # even when idx position is not there in the sum
+                # So, we remove that as well from the summed value and check again
+                win_sum -= (nums[idx] + nums[jdx])
+                idx += 1
+            else: # We keep on increasing the window size for ith position
+                jdx += 1
+
+        if min_len < (n+1):
+            return min_len
+        else:
+            return 0
+
