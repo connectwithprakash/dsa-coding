@@ -1,4 +1,4 @@
-# Attempt 1: Brute-force O(n^2) solution
+# Attempt 1: Brute-force O(n^3) solution
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
         n = len(nums)
@@ -8,7 +8,6 @@ class Solution:
                     return window_len
 
         return 0
-
 
 # Attempt 2: Divide and Conquer Solution -> not  O(nlogn)
 class Solution:
@@ -40,4 +39,21 @@ class Solution:
         min_size_sub_array, _ = divide_and_conquer(target, nums)
 
         return min_size_sub_array
+
+# Brute-force O(n^2) solution
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        n = len(nums)
+        min_len = 0
+        for idx in range(n):
+            window_sum = 0
+            for jdx in range(idx, n):
+                window_sum += nums[jdx]
+                if window_sum >= target:
+                    if min_len != 0:
+                        min_len = min(min_len, jdx-idx+1)
+                    else:
+                        min_len = jdx-idx+1
+
+        return min_len
 
