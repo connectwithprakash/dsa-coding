@@ -9,3 +9,32 @@ class Solution:
 
         return 0
 
+
+# Attempt 2: Divide and Conquer Solution but not efficient in finding sum
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        def divide_and_conquer(target, nums):
+            if len(nums) == 1:
+                if nums[0] >= target:
+                    return 1
+                else:
+                    return 0
+
+            left = divide_and_conquer(target, nums[:-1])
+            right = divide_and_conquer(target, nums[1:])
+            
+            if (left > 0) and (right > 0):
+                return min(left, right)
+            elif (left > 0):
+                return left
+            elif (right > 0):
+                return right
+            elif sum(nums) >= target:
+                return len(nums)
+            else:
+                return 0
+
+        min_size_sub_array, _ = divide_and_conquer(target, nums)
+
+        return min_size_sub_array
+
