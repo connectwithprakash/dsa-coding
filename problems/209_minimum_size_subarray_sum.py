@@ -10,29 +10,32 @@ class Solution:
         return 0
 
 
-# Attempt 2: Divide and Conquer Solution but not efficient in finding sum
+# Attempt 2: Divide and Conquer Solution -> not  O(nlogn)
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
         def divide_and_conquer(target, nums):
             if len(nums) == 1:
                 if nums[0] >= target:
-                    return 1
+                    return 1, nums[0]
                 else:
-                    return 0
+                    return 0, nums[0]
 
-            left = divide_and_conquer(target, nums[:-1])
-            right = divide_and_conquer(target, nums[1:])
+            left, left_sum = divide_and_conquer(target, nums[:-1])
+            right, right_sum = divide_and_conquer(target, nums[1:])
             
             if (left > 0) and (right > 0):
-                return min(left, right)
+                if left < right:
+                    return left, left_sum
+                else:
+                    return right, right_sum
             elif (left > 0):
-                return left
+                return left, left_sum
             elif (right > 0):
-                return right
-            elif sum(nums) >= target:
-                return len(nums)
+                return right, right_sum
+            elif (left_sum+nums[-1]) >= target:
+                return len(nums), (left_sum+nums[-1])
             else:
-                return 0
+                return 0, (left_sum+nums[-1])
 
         min_size_sub_array, _ = divide_and_conquer(target, nums)
 
