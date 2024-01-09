@@ -32,18 +32,9 @@ class Solution:
             elif direction == "up":
                 idx -= 1
             
-            
-            if idx == -1 or idx == m:
-                if idx == m:
-                    idx -= 1
-                else:
-                    idx += 1
-                direction = spiral_path[direction]
-            if jdx == -1 or jdx == n:
-                if jdx == n:
-                    jdx -= 1
-                else:
-                    jdx += 1
+            if idx == -1 or idx == m or jdx == -1 or jdx == n:
+                idx = max(0, min(idx, m-1))
+                jdx = max(0, min(jdx, n-1))
                 direction = spiral_path[direction]
 
         return result
