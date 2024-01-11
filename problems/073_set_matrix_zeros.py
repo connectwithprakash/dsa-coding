@@ -32,7 +32,7 @@ class Solution:
                     traverse(idx, jdx)
                     matrix[idx][jdx] = 0
 
-# Attempt 2: Another approach with out using character O(n^2)
+# Attempt 2: Another (faster) approach with out using character O(n^2)
 class Solution:
     def setZeroes(self, matrix: List[List[int]]) -> None:
         """
