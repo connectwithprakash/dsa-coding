@@ -21,10 +21,10 @@ The approach is divided in three steps.
 1. Loop through each cell.
 2. Count the number of `neighbors`. - `count_neighbors()`
 2. Based `current_state`, number of alive neighbors compute the `next_state` and store the gray code mapping according to `transition_map`. - `decide_life()`
-3. Now, we know the transition state (`curr_state` -> `next_state`). We can convert the matrix back to binary by running another loop.
+3. Now, we know the transition state (`curr_state` -> `next_state`). For example: 3 represents that the transition is alive(1) -> dead(0). We can convert the matrix back to binary by running another loop.
 
 # Complexity
-- Time complexity: $$O(n^2)$$
+- Time complexity: $$O(m*n)$$
 <!-- Add your time complexity here, e.g. $$O(n)$$ -->
 
 - Space complexity: $$O(1)$$

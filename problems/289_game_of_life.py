@@ -1,4 +1,4 @@
-# Attempt 1: O(n^2) time and O(1) space complexity solution
+# Attempt 1: O(m*n) time and O(1) space complexity solution
 class Solution:
     def gameOfLife(self, board: List[List[int]]) -> None:
         """
