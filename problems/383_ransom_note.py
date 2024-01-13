@@ -1,4 +1,4 @@
-# Attempt: O(n) using hashmap
+# Attempt 1: O(n) using hashmap
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
         hashmap = {}
@@ -14,6 +14,16 @@ class Solution:
             if hashmap.get(char, 0):
                 hashmap[char] -= 1
             else:
+                return False
+
+        return True
+
+
+# Attempt 2: Using count function on string
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        for char in ransomNote:
+            if ransomNote.count(char) > magazine.count(char):
                 return False
 
         return True
