@@ -1,13 +1,16 @@
+# Attempt 2
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        char_map = {}
-        for i in range(len(s)):
-            if s[i] not in char_map:
-                if t[i] in char_map.values():
+        hashmap = {}
+        for idx in range(len(s)):
+            if s[idx] in hashmap:
+                if hashmap[s[idx]] != t[idx]:
                     return False
-                else:
-                    char_map[s[i]] = t[i]
             else:
-                if char_map[s[i]] != t[i]:
+                if t[idx] not in hashmap.values():
+                    hashmap[s[idx]] = t[idx]
+                else:
                     return False
+
         return True
+
