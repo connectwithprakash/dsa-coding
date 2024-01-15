@@ -43,3 +43,18 @@ class Solution:
 
         return grouped_anagrams
 
+
+# Attempt 2: O(n*mlog(m)) solution
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:    
+        grouped_anagrams = {}
+        for idx in range(len(strs)):
+            sorted_word = ''.join(sorted(strs[idx]))
+            if not grouped_anagrams.get(sorted_word, 0):
+                grouped_anagrams[sorted_word] = []
+            
+            grouped_anagrams[sorted_word].append(strs[idx])
+        grouped_anagrams = list(grouped_anagrams.values())
+
+        return grouped_anagrams
+
