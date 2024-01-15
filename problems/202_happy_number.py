@@ -1,16 +1,15 @@
-# Attempt 1: Naive O(n^2) solution
+# Attempt 1: Naive O(1) solution
 class Solution:
     def isHappy(self, n: int) -> bool:
         def digit_sum(n):
             return sum([int(digit)**2 for digit in str(n)])
 
-        dig_sum = n
-        digits = []
+        past_nums = set()
         while True:
-            dig_sum = digit_sum(dig_sum)
-            if dig_sum == 1:
+            n = digit_sum(n)
+            if n == 1:
                 return True
-            elif dig_sum in digits:
+            elif n in past_nums:
                 return False
-            digits.append(dig_sum)
+            past_nums.add(n)
 
