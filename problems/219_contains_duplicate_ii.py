@@ -33,3 +33,16 @@ class Solution:
 
         return found
 
+
+# Attempt 3: Optimized O(n) solution
+class Solution:
+    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+        n = len(nums)
+        hashmap = {}
+        for idx in range(len(nums)):
+            if (nums[idx] in hashmap) and ((idx - hashmap[nums[idx]]) <= k):
+                return True
+            else:
+                hashmap[nums[idx]] = idx
+        return False
+
