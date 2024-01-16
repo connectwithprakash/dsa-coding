@@ -21,3 +21,24 @@ class Solution:
 
         return length
 
+
+# Attempt 2: Optimized O(n) solution using set
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        # This is a O(n) solution because we only visit each number twice
+        # Convert into set
+        nums_s = set(nums)
+        length = 0
+        for num in nums:
+            if (num-1) in nums_s:
+                continue
+            else:
+                surplus = 1
+                # Increase the surplus when consecutive num is found
+                while (num+surplus) in nums_s:
+                    surplus += 1
+                if (surplus > length):
+                    length = surplus
+        
+        return length
+
