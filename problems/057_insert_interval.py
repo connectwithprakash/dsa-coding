@@ -24,4 +24,23 @@ class Solution:
         intervals = merge(intervals)
 
         return interval
-s
+
+
+# Attempt 2: Better O(n) solition
+class Solution:
+    def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
+        result = []
+        for idx in range(len(intervals)):
+            if newInterval[1] < intervals[idx][0]:
+                result.append(newInterval)
+                result = result + intervals[idx:]
+                return result
+            elif newInterval[0] > intervals[idx][1]:
+                result.append(intervals[idx])
+            else:
+                newInterval = [min(newInterval[0], intervals[idx][0]), max(newInterval[1], intervals[idx][1])]
+
+        result.append(newInterval)
+
+        return result
+
