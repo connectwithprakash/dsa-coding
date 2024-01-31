@@ -18,9 +18,9 @@ class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
         stack = []
         for token in tokens:
-            if token in ['+', '-', '*', '/']:
-                operand2 = int(stack.pop())
-                operand1 = int(stack.pop())
+            if token in "+-*/":
+                operand2 = stack.pop()
+                operand1 = stack.pop()
                 match token:
                     case '+':
                         result = operand1 + operand2
@@ -30,9 +30,9 @@ class Solution:
                         result = operand1 * operand2
                     case '/':
                         result = int(operand1 / operand2)
-                stack.append(str(result))                        
+                stack.append(result)                        
             else:
-                stack.append(token)
+                stack.append(int(token))
 
-        return int(stack[0])
+        return stack[0]
 
