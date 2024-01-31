@@ -19,10 +19,18 @@ class Solution:
         stack = []
         for token in tokens:
             if token in ['+', '-', '*', '/']:
-                operand2 = stack.pop()
-                operand1 = stack.pop()
-                result = str(int(eval(operand1+token+operand2)))
-                stack.append(result)
+                operand2 = int(stack.pop())
+                operand1 = int(stack.pop())
+                match token:
+                    case '+':
+                        result = operand1 + operand2
+                    case '-':
+                        result = operand1 - operand2
+                    case '*':
+                        result = operand1 * operand2
+                    case '/':
+                        result = int(operand1 / operand2)
+                stack.append(str(result))                        
             else:
                 stack.append(token)
 
