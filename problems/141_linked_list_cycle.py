@@ -29,3 +29,21 @@ class Solution:
             temp = temp.next
         return False
 
+
+# Attempt 3: Faster solution using fast and slow pointer
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+        if head is None or head.next is None:
+            return False
+
+        slow = head.next
+        fast = slow.next
+
+        while fast is not None and fast.next is not None:
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast:
+                return True
+
+        return False
+
