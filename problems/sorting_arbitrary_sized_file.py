@@ -39,7 +39,6 @@ class Sort:
 	
 	@staticmethod
 	def process_file(file_name):
-		print(f"Processing file {file_name}")
 		MEMORY[1][1] = 0  # chunks = 0
 		MEMORY[1][0] = 0 # n = 0
 		with open(file_name, 'r') as file:
@@ -197,23 +196,38 @@ class Sort:
 		# If the temp directory does not exist, create it
 		if not os.path.exists('temp'):
 			os.makedirs('temp')
-		print("Processing file")
+		print("Step 1: Processing file")
 		chunks = self.process_file(input_file)
-		print("Saving chunks")
+		print("Step 2: Saving chunks")
 		self.save_chunks(chunks, 'temp/processed_data.txt')
-		print("Sorting chunks")
+		print("Step 3: Sorting chunks")
 		self.sort_chunks()
-		print("Merging chunks")
+		print("Step 4: Merging chunks")
 		self.merge_all_files(output_file)
-		print("File sorted and saved")
+		print("Step 5: File sorted and saved")
 
 
 MEMORY = Memory()
 
 
 def main():
-	parser = argparse.ArgumentParser()
-	parser.add_argument("--input-file", help="File to sort", required=True)
+	"""
+	Sorts a file using the specified sorting algorithm.
+
+	The input file should be in a specific format. The numbers to be sorted should be in a file, with one number per line.
+	The sorted output will be written to the specified output file.
+
+	Example usage:
+	python sort_file.py --input-file input.txt --memory-size 100 --output-file output.txt
+	"""
+
+	parser = argparse.ArgumentParser(
+		description="""
+		Sort a file using the specified sorting algorithm.
+
+		The numbers to be sorted should be in a file, with one number per line.
+		""")
+	parser.add_argument("--input-file", help="Txt file to sort.", required=True)
 	parser.add_argument("--memory-size", type=int, help="Memory size", required=True)
 	parser.add_argument("--output-file", type=str, help="Output file name", required=True)
 	args = parser.parse_args()
