@@ -43,7 +43,7 @@ class Solution:
         result = ListNode()
         head = result
         carry = 0
-        while l1 or l2:
+        while l1 or l2 or carry:
             if l1:
                 carry += l1.val
                 l1 = l1.next
@@ -53,15 +53,6 @@ class Solution:
             
             carry, remainder = carry//10, carry%10
             head.next = ListNode(remainder)
-            head = head.next
-
-        while carry > 9:
-            carry, remainder = carry//10, carry%10
-            head.next = ListNode(remainder)
-            head = head.next
-
-        if carry:
-            head.next = ListNode(carry)
             head = head.next
 
         return result.next
