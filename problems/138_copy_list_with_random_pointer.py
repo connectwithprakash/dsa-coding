@@ -42,3 +42,43 @@ class Solution:
 
         return results
 
+
+# Second Attempt
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
+        self.val = int(x)
+        self.next = next
+        self.random = random
+"""
+
+class Solution:
+    def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
+        if head is None:
+            return None
+
+        new_head = Node(0)
+
+        oldlist2newlist = {}
+
+        # Create a list with new nodes
+        temp1, temp2 = new_head, head
+        while temp2:
+            temp1.next = Node(temp2.val, None, temp2.random)
+            temp1 = temp1.next
+            oldlist2newlist[temp2] = temp1
+            temp2 = temp2.next
+
+        new_head = new_head.next
+
+        # Replace the random node link from old to new
+        temp1 = new_head
+        while temp1:
+            temp1.random = oldlist2newlist[temp1.random] if temp1.random else None
+            temp1 = temp1.next
+
+        del oldlist2newlist
+
+        return new_head
+
