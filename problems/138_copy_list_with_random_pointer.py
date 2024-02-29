@@ -1,3 +1,4 @@
+# Attempt 1: My approach without hints - gives better result
 """
 # Definition for a Node.
 class Node:
