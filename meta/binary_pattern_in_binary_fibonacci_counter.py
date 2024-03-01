@@ -78,3 +78,24 @@ def num2bin(n: int) -> str:
     return bin(n)[2:]
 
 
+def binary_fibonacci(n: int) -> int:
+    """
+    Calculates the binary Fibonacci number at a given index.
+
+    Args:
+    - n: An index for the binary Fibonacci sequence.
+
+    Returns:
+    - int: The binary Fibonacci number at the specified index.
+    """
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    fn_2, fn_1 = 0, 1
+    for _ in range(2, n+1):
+        bit_len = no_of_bits(fn_2)
+        fn = (fn_1 << bit_len) | fn_2
+        fn_2 = fn_1
+        fn_1 = fn
+    return fn
