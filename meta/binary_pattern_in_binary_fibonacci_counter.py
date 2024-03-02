@@ -159,3 +159,78 @@ class Solution:
 
         return count
 
+    def count_following_pattern_in_count_sequence(self, pattern: str, n: int) -> int:
+        """
+        Counts the occurrences of a binary pattern in the binary Fibonacci sequence
+        by observing the pattern in the counts of Fibonacci numbers.
+
+        Args:
+        - pattern: The binary pattern to search for.
+        - n: The index up to which to search in the binary Fibonacci sequence.
+
+        Returns:
+        - int: The count of occurrences of the pattern.
+        """
+        pattern_len = no_of_bits(bin_to_dec(pattern))
+        break_count = 0
+        idx = 1
+        fib_dict = {}
+        # Find the first five count in binary fibonacii sequence where the length of the binary representation is sufficient
+        while break_count != 5:
+            n_fib = binary_fibonacci(idx)
+            n_bin_len = no_of_bits(n_fib)
+
+            if n_bin_len >= pattern_len:
+                fib_dict[idx] = self.count_using_logical_operations(
+                    pattern, idx)
+                break_count += 1
+            idx += 1
+		
+		# Check if the last five count in binary fibonacii sequence form the desired pattern in their counts
+        fib_dict_items = list(fib_dict.items())
+        fib_pattern_in_counts = []
+        for _ in range(len(fib_dict_items)-2):
+            _, last_count = fib_dict_items.pop()
+            _, second_last_count = fib_dict_items[-1]
+            _, third_last_count = fib_dict_items[-2]
+            fib_pattern_in_counts.append(last_count == (
+                second_last_count + third_last_count + 1))
+
+        follows_fib_pattern = all(fib_pattern_in_counts)
+		
+		# Check if there is an alternate plus one pattern in the counts of binary fibonacii sequence
+        alternate_plus_one_fib_pattern = False
+        fib_dict_items = list(fib_dict.items())
+        for idx in range(len(fib_dict_items)-2):
+            last_n, last_count = fib_dict_items.pop()
+            _, second_last_count = fib_dict_items[-1]
+            _, third_last_count = fib_dict_items[-2]
+            if last_count == (second_last_count + third_last_count + 1):
+                alternate_plus_one_fib_pattern = True
+                break
+
+        if n in fib_dict:
+            return fib_dict[n]
+
+        add_one = follows_fib_pattern | alternate_plus_one_fib_pattern
+
+        last_count = fib_dict[last_n]
+        second_last_count, third_last_count = fib_dict[last_n -
+                                                       1], fib_dict[last_n-2]
+		
+		# Calculate the counts of pattern in binary fibonacii numbers up to the desired index
+        for _ in range(last_n, n+1):
+            last_count = second_last_count + third_last_count
+            if add_one:
+                if follows_fib_pattern:
+                    last_count += 1
+                elif alternate_plus_one_fib_pattern:
+                    last_count += 1
+                    alternate_plus_one_fib_pattern = False
+                else:
+                    alternate_plus_one_fib_pattern = True
+
+            third_last_count, second_last_count = second_last_count, last_count
+
+        return last_count
+
