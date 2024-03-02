@@ -99,3 +99,34 @@ def binary_fibonacci(n: int) -> int:
         fn_2 = fn_1
         fn_1 = fn
     return fn
+
+
+class Solution:
+    @staticmethod
+    def count_using_string_matching(pattern: str, n: int) -> int:
+        """
+        Counts the occurrences of a binary pattern in the binary Fibonacci sequence using string matching.
+
+        Args:
+        - pattern: The binary pattern to search for.
+        - n: The index up to which to search in the binary Fibonacci sequence.
+
+        Returns:
+        - int: The count of occurrences of the pattern.
+        """
+        fib_n = binary_fibonacci(n)
+        pattern_num = bin_to_dec(pattern)
+        n_bin = num2bin(fib_n)
+        pattern_bin = num2bin(pattern_num)
+        pattern_len = len(pattern_bin)
+        n_bin_len = len(n_bin)
+
+        count = 0
+        for idx in range(n_bin_len - pattern_len + 1):
+            # Check if the substring matches the pattern
+            if n_bin[idx:idx+pattern_len] == pattern_bin:
+                count += 1
+            idx += 1
+
+        return count
+
