@@ -130,3 +130,32 @@ class Solution:
 
         return count
 
+    @staticmethod
+    def count_using_logical_operations(pattern: str, n: int) -> int:
+        """
+        Counts the occurrences of a binary pattern in the binary Fibonacci sequence using logical operations.
+
+        Args:
+        - pattern: The binary pattern to search for.
+        - n: The index up to which to search in the binary Fibonacci sequence.
+
+        Returns:
+        - int: The count of occurrences of the pattern.
+        """
+        n_fib = binary_fibonacci(n)
+        pattern_num = bin_to_dec(pattern)
+        pattern_len = no_of_bits(pattern_num)
+        n_len = no_of_bits(n_fib)
+
+        pattern_mask = (1 << pattern_len) - 1
+        shifted_n_fib = n_fib << 1
+        count = 0
+
+        for _ in range(n_len - pattern_len + 1):
+            shifted_n_fib >>= 1
+            masked_n_fib = shifted_n_fib & pattern_mask
+            if masked_n_fib == pattern_num:
+                count += 1
+
+        return count
+
