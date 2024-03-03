@@ -290,3 +290,36 @@ class Solution:
         return results
 
 
+def test_binary_fibonacci():
+    test_1 = num2bin(binary_fibonacci(0))
+    assert test_1 == "0", f"Test case 1 failed! Expected: 0, Got: {test_1}"
+    test_2 = num2bin(binary_fibonacci(1))
+    assert test_2 == "1", f"Test case 2 failed! Expected: 1, Got: {test_2}"
+    test_3 = num2bin(binary_fibonacci(2))
+    assert test_3 == "10", f"Test case 3 failed! Expected: 10, Got: {test_3}"
+    test_4 = num2bin(binary_fibonacci(3))
+    assert test_4 == "101", f"Test case 4 failed! Expected: 101, Got: {test_4}"
+    test_5 = num2bin(binary_fibonacci(4))
+    assert test_5 == "10110", f"Test case 5 failed! Expected: 10110, Got: {test_5}"
+    test_6 = num2bin(binary_fibonacci(5))
+    assert test_6 == "10110101", f"Test case 6 failed! Expected: 10110101, Got: {test_6}"
+    test_7 = num2bin(binary_fibonacci(6))
+    assert test_7 == "1011010110110", f"Test case 7 failed! Expected: 1011010110110, Got: {test_7}"
+
+
+def test_count_binary_pattern():
+    sol = Solution()
+
+    test_1 = sol.count_binary_pattern_occurences_in_binary_fibonacci("10", 6)
+    assert test_1 == {"string_matching": 5, "logical_operations": 5,
+                      "following_pattern_in_count_sequence": 5}, f"Test case 1 failed! Expected: 5, Got: {test_1}"
+
+    test_2 = sol.count_following_pattern_in_count_sequence(
+        "10110101101101", 96)
+    assert test_2 == 7540113804746346428, f"Test case 2 failed! Pattern: 10110101101101, n: 96, Expected: 7540113804746346428, Got: {test_2}"
+
+
+if __name__ == "__main__":
+    test_binary_fibonacci()
+    test_count_binary_pattern()
+    print("All test cases passed!")
