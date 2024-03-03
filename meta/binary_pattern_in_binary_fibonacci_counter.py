@@ -234,3 +234,59 @@ class Solution:
 
         return last_count
 
+    def count_binary_pattern_occurences_in_binary_fibonacci(self, pattern: str, n: int) -> Dict[str, int]:
+        """
+        Counts the occurrences of a binary pattern in the binary Fibonacci sequence
+        using multiple methods and returns the counts.
+
+        Args:
+        - pattern: The binary pattern to search for.
+        - n: The index up to which to search in the binary Fibonacci sequence.
+
+        Returns:
+        - Dict[str, int]: A dictionary containing counts using different methods.
+        """
+        results = {}
+        # Using string matching
+        results["string_matching"] = self.count_using_string_matching(
+            pattern, n)
+        # Using logical operations
+        results["logical_operations"] = self.count_using_logical_operations(
+            pattern, n)
+        # Using following pattern in count sequence
+        results["following_pattern_in_count_sequence"] = self.count_following_pattern_in_count_sequence(
+            pattern, n)
+        return results
+
+    def count_binary_pattern(self, pattern: str, n: int) -> int:
+        """
+        Counts the occurrences of a binary pattern in the binary Fibonacci sequence
+        up to a given index.
+
+        Args:
+        - pattern: The binary pattern to search for.
+        - n: The index up to which to search in the binary Fibonacci sequence.
+
+        Returns:
+        - int: The count of occurrences of the pattern.
+        """
+        return self.count_using_string_matching(pattern, n)
+
+    def count_binary_pattern_upto_n(self, pattern: str, n: int) -> Dict[int, int]:
+        """
+        Counts the occurrences of a binary pattern in the binary Fibonacci sequence
+        up to each index up to n.
+
+        Args:
+        - pattern: The binary pattern to search for.
+        - n: The index up to which to search in the binary Fibonacci sequence.
+
+        Returns:
+        - Dict[int, int]: A dictionary containing counts up to each index.
+        """
+        results = {}
+        for i in range(n+1):
+            results[i] = self.count_binary_pattern(pattern, i)
+        return results
+
+
