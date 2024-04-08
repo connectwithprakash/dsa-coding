@@ -31,3 +31,26 @@ class Solution:
 
         return head
 
+
+## Attempt 2: Using single pass through elements other than inside left and right
+class Solution:
+    def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
+        temp = head
+        stack = []
+        
+        # get to the starting node that needs to be reversed
+        for idx in range(2, left+1):
+            temp = temp.next
+
+        # Create a stack of the values to be reversed
+        temp2 = temp
+        for _ in range(left, right+1):
+            stack.append(temp2.val)
+            temp2 = temp2.next
+        # Reverse the ordering from left to right
+        for _ in range(left, right+1):
+            temp.val = stack.pop()
+            temp = temp.next
+        
+        return head
+
