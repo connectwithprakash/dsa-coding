@@ -1,4 +1,4 @@
-# Attemp 1: Fitst attempt with naive approach
+# Attemp 1: Fitst attempt with 0(n) using fast pointer
 
 # Definition for singly-linked list.
 # class ListNode:
@@ -21,16 +21,23 @@ class Solution:
                 fast = fast.next.next
                 n += 2
 
-        tail = fast
+        # connect tail to head
+        fast.next = head
+        
         k = k % n
         k = n - k
-        slow = head
-        for idx in range(1, k):
-            slow = slow.next
+        fast = head
 
-        tail.next = head
-        head = slow.next
-        slow.next = None
+        idx = 1
+        while (idx+2) <= k:
+            fast = fast.next.next
+            idx += 2
+        
+        if idx != k:
+            fast = fast.next
+
+        head = fast.next
+        fast.next = None
         
         return head
 
