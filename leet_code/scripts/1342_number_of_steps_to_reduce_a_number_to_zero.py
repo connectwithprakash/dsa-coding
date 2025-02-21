@@ -7,12 +7,22 @@ Idea: A simple approach would be to just add a bunch of conditional statement in
 
 class Solution:
     def numberOfSteps(self, num: int) -> int:
-        num_steps = 0
-        while num:
-            if num % 2 == 0:  # Is even
-                num /= 2
-            else:  # Is odd
-                num -= 1
-            num_steps += 1
+        # Using loop
 
-        return num_steps
+        # num_steps = 0
+        # while num:
+        #     if num % 2 == 0:    # Is even
+        #         num /= 2
+        #     else:   # Is odd
+        #         num -= 1
+        #     num_steps += 1
+
+        # return num_steps
+
+        # Using recurrence
+        if num == 0:
+            return 0
+        if num % 2 == 0:
+            return 1 + self.numberOfSteps((num // 2))
+        else:
+            return 1 + self.numberOfSteps((num - 1))
