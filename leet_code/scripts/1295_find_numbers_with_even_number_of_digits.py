@@ -9,4 +9,19 @@ Space complexity -> k
 
 class Solution:
     def findNumbers(self, nums: List[int]) -> int:
-        return sum((True for num in nums if not len(str(num)) % 2))
+        # return sum((True for num in nums if not len(str(num)) % 2))
+
+        """
+        Let's try to atleast decrease the space complexity to constant
+        What we could do is create a variable to keep track of the count of numbers with even number of digits.
+        And create a function that would do a repeated division to find out the number of times the division occured by 10
+        to get the count of the digits present in the number
+        """
+
+        def number_of_digits(num):
+            if not num:
+                return 0
+            return number_of_digits(num // 10) + 1
+
+        # Do a bit wise and to see if we have even or odd number of digits for each number and sum them together
+        return sum(not number_of_digits(num) & 1 for num in nums)
