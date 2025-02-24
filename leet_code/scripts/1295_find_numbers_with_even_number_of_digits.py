@@ -9,7 +9,7 @@ Space complexity -> k
 
 class Solution:
     def findNumbers(self, nums: List[int]) -> int:
-        # return sum((True for num in nums if not len(str(num)) % 2))
+        # return sum((True for num in nums if not len(str(num)) % 2)) -> Fastest
 
         """
         Let's try to atleast decrease the space complexity to constant
@@ -19,9 +19,17 @@ class Solution:
         """
 
         def number_of_digits(num):
-            if not num:
-                return 0
-            return number_of_digits(num // 10) + 1
+            # Recursive approach is slow
+            # if not num:
+            #     return 0
+            # return number_of_digits(num // 10) + 1
+
+            # Better than above
+            digits_count = 0
+            while num:
+                num = num // 10
+                digits_count += 1
+            return digits_count
 
         # Do a bit wise and to see if we have even or odd number of digits for each number and sum them together
         return sum(not number_of_digits(num) & 1 for num in nums)
