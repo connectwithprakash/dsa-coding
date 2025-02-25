@@ -19,38 +19,26 @@ Complexity:
 
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
-        # Poor implementation
-        pivot_index = 0
-        # finding the pivot index using slope formula, T: O(n)
-        for idx in range(len(nums)):
-            # Finding pivot point
-            if nums[idx] > 0:
-                break
-        pivot_index = idx
-
-        # Square the numbers
+        # Let's do the same thing with clean code
+        # Find the pivot index
+        pivot_idx = next((idx for idx, num in enumerate(nums) if num >= 0), len(nums) - 1)
+        # Square each number
         nums = [num**2 for num in nums]
-        print(pivot_index)
 
+        # Now, Create an array with two pointers
         # Merge the two section of the array, T: O(n)
-        if pivot_index:
-            idx = pivot_index - 1
-            jdx = pivot_index
-            squared_nums = []  # S: O(n)
-            while (idx > -1) and (jdx < len(nums)):
-                print("in loop")
-                if nums[idx] > nums[jdx]:
-                    squared_nums.append(nums[jdx])
-                    jdx += 1
+        def merge_sorted_arrays(first: List[int], second: List[int]):
+            merged = []
+            idx = jdx = 0
+            while idx < len(first) and jdx < len(second):
+                if first[idx] <= second[jdx]:
+                    merged.append(first[idx])
+                    idx += 1
                 else:
-                    squared_nums.append(nums[idx])
-                    idx -= 1
+                    merged.append(second[jdx])
+                    jdx += 1
+            merged.extend(first[idx:])
+            merged.extend(second[jdx:])
+            return merged
 
-            if idx > -1:
-                squared_nums.extend(nums[idx::-1])
-            if jdx < len(nums):
-                squared_nums.extend(nums[jdx::])
-        else:
-            squared_nums = nums
-
-        return squared_nums
+        return merge_sorted_arrays(nums[:pivot_idx][::-1], nums[pivot_idx:])
