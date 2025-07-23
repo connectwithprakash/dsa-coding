@@ -62,3 +62,38 @@ When I encounter a number that's already a key in my hashmap, it means:
 - I previously stored `target - some_previous_number` as a key
 - Now I found `some_previous_number` 
 - So: `target - some_previous_number + some_previous_number = target` ✓
+
+## Alternative Approaches I Considered
+
+### Two Pointers Approach (If Sorted)
+If the array were sorted, I could use two pointers:
+```python
+# This would lose original indices, so not applicable here
+def twoSumSorted(nums, target):
+    left, right = 0, len(nums) - 1
+    while left < right:
+        current_sum = nums[left] + nums[right]
+        if current_sum == target:
+            return [left, right]
+        elif current_sum < target:
+            left += 1
+        else:
+            right -= 1
+```
+**Problem**: Sorting destroys original indices, and we need to return indices.
+
+### Brute Force (Not Recommended)
+```python
+def twoSumBruteForce(nums, target):
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return [i, j]
+```
+**Complexity**: O(n²) time, O(1) space - Too slow for large inputs.
+
+## Key Insight
+The hashmap approach is optimal for this problem because:
+- We need original indices (can't sort)
+- One-pass solution with O(1) lookups
+- No more efficient solution exists for the general case

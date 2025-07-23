@@ -6,7 +6,7 @@
 - [x] Contains Duplicate - `/arrays_and_hashing/contains_duplicate.md`
 - [x] Valid Anagram - `/arrays_and_hashing/valid_anagram.md`
 - [x] Two Sum - `/arrays_and_hashing/two_sum.md`
-- [ ] Group Anagrams
+- [x] Group Anagrams - `/arrays_and_hashing/group_anagrams.md`
 - [ ] Top K Frequent Elements
 - [ ] Product of Array Except Self
 - [ ] Valid Sudoku
