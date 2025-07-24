@@ -7,7 +7,7 @@
 - [x] Valid Anagram - `/arrays_and_hashing/valid_anagram.md`
 - [x] Two Sum - `/arrays_and_hashing/two_sum.md`
 - [x] Group Anagrams - `/arrays_and_hashing/group_anagrams.md`
-- [ ] Top K Frequent Elements
+- [x] Top K Frequent Elements - `/arrays_and_hashing/top_k_frequent_elements.md`
 - [ ] Product of Array Except Self
 - [ ] Valid Sudoku
 - [ ] Encode and Decode Strings
