@@ -10,7 +10,7 @@
 - [x] Top K Frequent Elements - `/arrays_and_hashing/top_k_frequent_elements.md`
 - [ ] Product of Array Except Self
 - [ ] Valid Sudoku
-- [ ] Encode and Decode Strings
+- [x] Encode and Decode Strings - `/arrays_and_hashing/encode_decode_strings.md`
 - [ ] Longest Consecutive Sequence
 
 ### Two Pointers
