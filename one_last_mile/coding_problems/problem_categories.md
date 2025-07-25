@@ -8,7 +8,7 @@
 - [x] Two Sum - `/arrays_and_hashing/two_sum.md`
 - [x] Group Anagrams - `/arrays_and_hashing/group_anagrams.md`
 - [x] Top K Frequent Elements - `/arrays_and_hashing/top_k_frequent_elements.md`
-- [ ] Product of Array Except Self
+- [x] Product of Array Except Self - `/arrays_and_hashing/product_array_except_self.md`
 - [ ] Valid Sudoku
 - [x] Encode and Decode Strings - `/arrays_and_hashing/encode_decode_strings.md`
 - [ ] Longest Consecutive Sequence
