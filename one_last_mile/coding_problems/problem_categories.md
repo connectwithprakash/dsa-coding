@@ -14,7 +14,7 @@
 - [x] Longest Consecutive Sequence - `/arrays_and_hashing/longest_consecutive_sequence.md`
 
 ### Two Pointers
-- [ ] Valid Palindrome
+- [x] Valid Palindrome - `/two_pointers/valid_palindrome.md`
 - [ ] Two Sum II
 - [ ] 3Sum
 - [ ] Container With Most Water
