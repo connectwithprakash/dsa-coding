@@ -11,7 +11,7 @@
 - [x] Product of Array Except Self - `/arrays_and_hashing/product_array_except_self.md`
 - [x] Valid Sudoku - `/arrays_and_hashing/valid_sudoku.md`
 - [x] Encode and Decode Strings - `/arrays_and_hashing/encode_decode_strings.md`
-- [ ] Longest Consecutive Sequence
+- [x] Longest Consecutive Sequence - `/arrays_and_hashing/longest_consecutive_sequence.md`
 
 ### Two Pointers
 - [ ] Valid Palindrome
