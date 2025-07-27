@@ -153,4 +153,3 @@ class Solution:
 ## Key Insight
 The brilliant part is recognizing that I should only start counting from sequence beginnings. This prevents counting the same sequence multiple times and ensures each number is processed at most twice, giving us true O(n) performance!
 
-Your solution demonstrates excellent understanding of hash set optimization and sequence detection patterns! 🎯

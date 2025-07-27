@@ -16,7 +16,7 @@
 ### Two Pointers
 - [x] Valid Palindrome - `/two_pointers/valid_palindrome.md`
 - [x] Two Sum II - `/two_pointers/two_sum_ii.md`
-- [ ] 3Sum
+- [x] 3Sum - `/two_pointers/three_sum.md`
 - [ ] Container With Most Water
 - [ ] Trapping Rain Water
 
