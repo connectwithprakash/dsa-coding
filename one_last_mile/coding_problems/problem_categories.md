@@ -18,7 +18,7 @@
 - [x] Two Sum II - `/two_pointers/two_sum_ii.md`
 - [x] 3Sum - `/two_pointers/three_sum.md`
 - [x] Container With Most Water - `/two_pointers/container_with_most_water.md`
-- [ ] Trapping Rain Water
+- [x] Trapping Rain Water - `/two_pointers/trapping_rain_water.md`
 
 ### Sliding Window
 - [ ] Best Time to Buy and Sell Stock
