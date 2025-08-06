@@ -21,7 +21,7 @@
 - [x] Trapping Rain Water - `/two_pointers/trapping_rain_water.md`
 
 ### Sliding Window
-- [ ] Best Time to Buy and Sell Stock
+- [x] Best Time to Buy and Sell Stock - `/sliding_window/best_time_buy_sell_stock.md`
 - [ ] Longest Substring Without Repeating Characters
 - [ ] Longest Repeating Character Replacement
 - [ ] Permutation in String
