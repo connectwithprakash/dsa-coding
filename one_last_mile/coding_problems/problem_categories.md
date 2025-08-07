@@ -22,7 +22,7 @@
 
 ### Sliding Window
 - [x] Best Time to Buy and Sell Stock - `/sliding_window/best_time_buy_sell_stock.md`
-- [ ] Longest Substring Without Repeating Characters
+- [x] Longest Substring Without Repeating Characters - `/sliding_window/longest_substring_without_repeating.md`
 - [ ] Longest Repeating Character Replacement
 - [ ] Permutation in String
 - [ ] Minimum Window Substring
