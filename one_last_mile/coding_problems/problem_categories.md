@@ -25,7 +25,7 @@
 - [x] Longest Substring Without Repeating Characters - `/sliding_window/longest_substring_without_repeating.md`
 - [x] Longest Repeating Character Replacement - `/sliding_window/longest_repeating_character_replacement.md`
 - [x] Permutation in String - `/sliding_window/permutation_in_string.md`
-- [ ] Minimum Window Substring
+- [x] Minimum Window Substring - `/sliding_window/minimum_window_substring.md`
 
 ### Stack
 - [ ] Valid Parentheses
