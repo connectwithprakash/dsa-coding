@@ -33,7 +33,7 @@
 - [x] Min Stack - `/stack/min_stack.md`
 - [x] Evaluate Reverse Polish Notation - `/stack/evaluate_reverse_polish_notation.md`
 - [x] Generate Parentheses - `/stack/generate_parentheses.md`
-- [ ] Daily Temperatures
+- [x] Daily Temperatures - `/stack/daily_temperatures.md`
 - [ ] Car Fleet
 
 ### Binary Search
