@@ -31,7 +31,7 @@
 ### Stack
 - [x] Valid Parentheses - `/stack/valid_parentheses.md`
 - [x] Min Stack - `/stack/min_stack.md`
-- [ ] Evaluate Reverse Polish Notation
+- [x] Evaluate Reverse Polish Notation - `/stack/evaluate_reverse_polish_notation.md`
 - [ ] Generate Parentheses
 - [ ] Daily Temperatures
 - [ ] Car Fleet
