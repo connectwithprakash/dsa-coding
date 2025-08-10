@@ -29,7 +29,7 @@
 - [x] Sliding Window Maximum - `/sliding_window/sliding_window_maximum.md`
 
 ### Stack
-- [ ] Valid Parentheses
+- [x] Valid Parentheses - `/stack/valid_parentheses.md`
 - [ ] Min Stack
 - [ ] Evaluate Reverse Polish Notation
 - [ ] Generate Parentheses
