@@ -30,7 +30,7 @@
 
 ### Stack
 - [x] Valid Parentheses - `/stack/valid_parentheses.md`
-- [ ] Min Stack
+- [x] Min Stack - `/stack/min_stack.md`
 - [ ] Evaluate Reverse Polish Notation
 - [ ] Generate Parentheses
 - [ ] Daily Temperatures
