@@ -26,6 +26,7 @@
 - [x] Longest Repeating Character Replacement - `/sliding_window/longest_repeating_character_replacement.md`
 - [x] Permutation in String - `/sliding_window/permutation_in_string.md`
 - [x] Minimum Window Substring - `/sliding_window/minimum_window_substring.md`
+- [x] Sliding Window Maximum - `/sliding_window/sliding_window_maximum.md`
 
 ### Stack
 - [ ] Valid Parentheses
