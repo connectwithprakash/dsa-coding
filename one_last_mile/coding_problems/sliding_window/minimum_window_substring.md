@@ -9,7 +9,7 @@ The testcases will be generated such that the answer is unique.
 ```
 Input: s = "ADOBECODEBANC", t = "ABC"
 Output: "BANC"
-Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
+Explanation: The minimum window substring "BANC" inclAudes 'A', 'B', and 'C' from string t.
 
 Input: s = "a", t = "a"
 Output: "a"

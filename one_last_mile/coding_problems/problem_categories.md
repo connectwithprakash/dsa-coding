@@ -35,6 +35,7 @@
 - [x] Generate Parentheses - `/stack/generate_parentheses.md`
 - [x] Daily Temperatures - `/stack/daily_temperatures.md`
 - [x] Car Fleet - `/stack/car_fleet.md`
+- [x] Largest Rectangle in Histogram - `/stack/largest_rectangle_in_histogram.md`
 
 ### Binary Search
 - [ ] Binary Search
