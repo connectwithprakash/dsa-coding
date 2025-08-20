@@ -39,7 +39,7 @@
 
 ### Binary Search
 - [x] Binary Search - `/binary_search/binary_search.md`
-- [ ] Search a 2D Matrix
+- [x] Search a 2D Matrix - `/binary_search/search_2d_matrix.md`
 - [ ] Koko Eating Bananas
 - [ ] Find Minimum in Rotated Sorted Array
 - [ ] Search in Rotated Sorted Array
