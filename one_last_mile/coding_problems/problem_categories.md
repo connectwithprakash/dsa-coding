@@ -38,7 +38,7 @@
 - [x] Largest Rectangle in Histogram - `/stack/largest_rectangle_in_histogram.md`
 
 ### Binary Search
-- [ ] Binary Search
+- [x] Binary Search - `/binary_search/binary_search.md`
 - [ ] Search a 2D Matrix
 - [ ] Koko Eating Bananas
 - [ ] Find Minimum in Rotated Sorted Array
