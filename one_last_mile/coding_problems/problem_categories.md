@@ -43,7 +43,7 @@
 - [x] Koko Eating Bananas - `/binary_search/koko_eating_bananas.md`
 - [x] Find Minimum in Rotated Sorted Array - `/binary_search/find_minimum_rotated_sorted_array.md`
 - [x] Search in Rotated Sorted Array - `/binary_search/search_rotated_sorted_array.md`
-- [ ] Time Based Key-Value Store
+- [x] Time Based Key-Value Store - `/binary_search/time_based_key_value_store.md`
 
 ### Linked List
 - [ ] Reverse Linked List
