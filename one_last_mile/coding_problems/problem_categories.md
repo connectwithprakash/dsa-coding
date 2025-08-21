@@ -47,7 +47,7 @@
 - [x] Median of Two Sorted Arrays (Hard) - `/binary_search/median_of_two_sorted_arrays.md`
 
 ### Linked List
-- [ ] Reverse Linked List
+- [x] Reverse Linked List - `/linked_list/reverse_linked_list.md`
 - [ ] Merge Two Sorted Lists
 - [ ] Reorder List
 - [ ] Remove Nth Node From End of List
