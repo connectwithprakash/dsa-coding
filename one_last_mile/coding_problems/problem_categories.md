@@ -44,6 +44,7 @@
 - [x] Find Minimum in Rotated Sorted Array - `/binary_search/find_minimum_rotated_sorted_array.md`
 - [x] Search in Rotated Sorted Array - `/binary_search/search_rotated_sorted_array.md`
 - [x] Time Based Key-Value Store - `/binary_search/time_based_key_value_store.md`
+- [x] Median of Two Sorted Arrays (Hard) - `/binary_search/median_of_two_sorted_arrays.md`
 
 ### Linked List
 - [ ] Reverse Linked List
