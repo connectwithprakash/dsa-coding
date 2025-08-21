@@ -51,7 +51,7 @@
 - [x] Merge Two Sorted Lists - `/linked_list/merge_two_sorted_lists.md`
 - [x] Linked List Cycle - `/linked_list/linked_list_cycle.md`
 - [x] Reorder List - `/linked_list/reorder_list.md`
-- [ ] Remove Nth Node From End of List
+- [x] Remove Nth Node From End of List - `/linked_list/remove_nth_from_end.md`
 - [ ] Copy List with Random Pointer
 - [ ] Add Two Numbers
 
