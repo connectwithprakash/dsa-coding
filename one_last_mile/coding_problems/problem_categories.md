@@ -50,7 +50,7 @@
 - [x] Reverse Linked List - `/linked_list/reverse_linked_list.md`
 - [x] Merge Two Sorted Lists - `/linked_list/merge_two_sorted_lists.md`
 - [x] Linked List Cycle - `/linked_list/linked_list_cycle.md`
-- [ ] Reorder List
+- [x] Reorder List - `/linked_list/reorder_list.md`
 - [ ] Remove Nth Node From End of List
 - [ ] Copy List with Random Pointer
 - [ ] Add Two Numbers
