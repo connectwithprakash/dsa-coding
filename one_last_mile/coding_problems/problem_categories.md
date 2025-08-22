@@ -52,7 +52,7 @@
 - [x] Linked List Cycle - `/linked_list/linked_list_cycle.md`
 - [x] Reorder List - `/linked_list/reorder_list.md`
 - [x] Remove Nth Node From End of List - `/linked_list/remove_nth_from_end.md`
-- [ ] Copy List with Random Pointer
+- [x] Copy Linked List with Random Pointer - `/linked_list/copy_linked_list_with_random_pointer.md`
 - [ ] Add Two Numbers
 
 ### Trees
