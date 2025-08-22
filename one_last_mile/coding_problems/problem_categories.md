@@ -47,6 +47,8 @@
 - [x] Median of Two Sorted Arrays (Hard) - `/binary_search/median_of_two_sorted_arrays.md`
 
 ### Linked List
+
+#### Core Problems (NeetCode 150)
 - [x] Reverse Linked List - `/linked_list/reverse_linked_list.md`
 - [x] Merge Two Sorted Lists - `/linked_list/merge_two_sorted_lists.md`
 - [x] Linked List Cycle - `/linked_list/linked_list_cycle.md`
@@ -54,6 +56,27 @@
 - [x] Remove Nth Node From End of List - `/linked_list/remove_nth_from_end.md`
 - [x] Copy Linked List with Random Pointer - `/linked_list/copy_linked_list_with_random_pointer.md`
 - [x] Add Two Numbers - `/linked_list/add_two_numbers.md`
+- [ ] Find the Duplicate Number
+- [ ] LRU Cache
+- [ ] Merge K Sorted Lists (Hard)
+- [ ] Reverse Nodes in K-Group (Hard)
+
+#### Additional Problems (NeetCode 250)
+- [ ] Middle of the Linked List
+- [ ] Design Linked List
+- [ ] Linked List Cycle II
+- [ ] Palindrome Linked List
+- [ ] Intersection of Two Linked Lists
+- [ ] Delete Node in a Linked List
+- [ ] Reverse Linked List II
+- [ ] Rotate List
+- [ ] Swap Nodes in Pairs
+- [ ] Remove Duplicates from Sorted List
+- [ ] Remove Duplicates from Sorted List II
+- [ ] Partition List
+- [ ] Sort List
+- [ ] Insertion Sort List
+- [ ] Convert Sorted List to Binary Search Tree
 
 ### Trees
 - [ ] Invert Binary Tree
