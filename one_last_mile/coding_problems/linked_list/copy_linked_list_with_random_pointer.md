@@ -130,9 +130,89 @@ Position:    0         1          2
 The structure is identical but with completely new nodes!
 ```
 
-## Alternative: O(1) Space Interweaving Approach
+## Alternative 1: Index-Based Approach (My Creative Solution)
 
-This clever approach avoids the hash map by interweaving copied nodes with originals:
+This approach uses the original nodes' values as temporary storage for indices, creating an implicit mapping without a hash map:
+
+```python
+class Solution:
+    def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
+        if head is None:
+            return None
+            
+        temp = head
+        results = []  # List to store new nodes
+
+        # Phase 1: Create copy nodes and store original values as indices
+        idx = 0
+        while temp:
+            # Create new node with original value
+            results.append(Node(temp.val, None, temp.random))
+            # Temporarily store index in original node's value
+            temp.val = idx
+            idx += 1
+            temp = temp.next
+
+        # Phase 2: Connect next pointers in the new list
+        for idx in range(len(results)-1):
+            results[idx].next = results[idx+1]
+
+        # Phase 3: Fix random pointers using the index mapping
+        # node.random still points to original nodes, which now have indices as values
+        for node in results:
+            if node.random:
+                # Use the index stored in original node to find corresponding new node
+                node.random = results[node.random.val]
+            else:
+                node.random = None
+
+        # Get the head of new list
+        new_head = results[0]
+
+        # Phase 4: Restore original values in the original list
+        temp1, temp2 = head, new_head
+        while temp1 and temp2:
+            temp1.val = temp2.val  # Restore from copy
+            temp1 = temp1.next
+            temp2 = temp2.next
+
+        return new_head
+```
+
+### Visual Example of Index-Based Approach:
+
+```
+Original: [7] → [13] → [11]
+           ↓     ↓      ↓
+        random: None   [7]   [13]
+
+Step 1 - Replace values with indices:
+Original: [0] → [1] → [2]  (values replaced with indices)
+           ↓     ↓     ↓
+        random: None  [0]   [1]
+
+Create:  results = [Node(7), Node(13), Node(11)]
+
+Step 2 - Connect next pointers:
+results: [7] → [13] → [11] → None
+
+Step 3 - Fix random pointers:
+- results[0].random = None (was None)
+- results[1].random = results[0] (using index 0 from original)
+- results[2].random = results[1] (using index 1 from original)
+
+Step 4 - Restore original values:
+Original: [7] → [13] → [11] (values restored)
+```
+
+### Complexity Analysis:
+- **Time:** O(n) - Four passes through the list
+- **Space:** O(n) - The list container is auxiliary space
+- **Key Insight:** Uses original list as implicit index mapping
+
+## Alternative 2: O(1) Space Interweaving Approach
+
+This approach avoids both hash map and list by interweaving copied nodes with originals:
 
 ```python
 class Solution:
@@ -174,7 +254,7 @@ class Solution:
 
 ## Complexity Analysis
 
-### Hash Map Approach (My Solution)
+### Hash Map Approach (First Solution)
 - **Time Complexity:** O(n)
   - First pass to create nodes: O(n)
   - Second pass to connect pointers: O(n)
@@ -182,11 +262,24 @@ class Solution:
 - **Space Complexity:** O(n)
   - Hash map storing n node mappings
 
-### Interweaving Approach
+### Index-Based Approach (Creative Solution)
+- **Time Complexity:** O(n)
+  - Phase 1: Create nodes and modify values: O(n)
+  - Phase 2: Connect next pointers: O(n)
+  - Phase 3: Fix random pointers: O(n)
+  - Phase 4: Restore original values: O(n)
+  - Total: O(4n) = O(n)
+- **Space Complexity:** O(n)
+  - Python list container for nodes (auxiliary space)
+  - Note: The nodes themselves are required output, but the list container is extra
+- **Modifies Input:** Yes (temporarily changes values, then restores)
+
+### Interweaving Approach (True O(1) Space)
 - **Time Complexity:** O(n)
   - Three passes, each O(n)
 - **Space Complexity:** O(1)
   - No extra data structures (only the output list)
+- **Modifies Input:** Yes (temporarily changes structure, then restores)
 
 ## Edge Cases
 
@@ -260,6 +353,24 @@ Similar problems:
 - Copy List with Random Pointer II
 - Deep copy of tree with parent pointers
 
+## Comparison of All Three Approaches
+
+| Approach | Time | Auxiliary Space | Modifies Input | Key Technique |
+|----------|------|-----------------|----------------|---------------|
+| Hash Map | O(n) | O(n) - hash map | No | Explicit node mapping |
+| Index-Based | O(n) | O(n) - list container | Yes (restored) | Values as indices |
+| Interweaving | O(n) | O(1) | Yes (restored) | Pointer manipulation |
+
+### When to Use Each:
+- **Hash Map**: Most intuitive, doesn't modify input, standard approach
+- **Index-Based**: Creative when you can modify values temporarily
+- **Interweaving**: When true O(1) auxiliary space is required
+
 ## What I Learned
 
-The hash map approach is intuitive and clean - it directly models the relationship between original and copied nodes. While the interweaving approach is clever and saves space, the hash map solution is more maintainable and extends naturally to other graph copying problems. The key insight is that we need a way to map from original nodes to their copies, and a hash map is the most straightforward way to achieve this.
+The hash map approach is intuitive and clean - it directly models the relationship between original and copied nodes. My index-based solution shows that we can use the original list itself as implicit storage by temporarily repurposing node values as indices - essentially creating an in-place hash map! While the interweaving approach achieves true O(1) auxiliary space, all three solutions demonstrate different ways to solve the fundamental problem: maintaining a mapping between original and copied nodes.
+
+The key insight across all approaches is that we need a way to map from original nodes to their copies:
+- Hash map does this explicitly
+- Index-based uses the original list as the mapping
+- Interweaving uses pointer structure as the mapping
