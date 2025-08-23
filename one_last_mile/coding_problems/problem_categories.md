@@ -58,7 +58,7 @@
 - [x] Add Two Numbers - `/linked_list/add_two_numbers.md`
 - [x] Find the Duplicate Number - `/linked_list/find_duplicate_number.md`
 - [x] LRU Cache - `/linked_list/lru_cache.md`
-- [ ] Merge K Sorted Lists (Hard)
+- [x] Merge K Sorted Lists (Hard) - `/linked_list/merge_k_sorted_lists.md`
 - [ ] Reverse Nodes in K-Group (Hard)
 
 #### Additional Problems (NeetCode 250)
