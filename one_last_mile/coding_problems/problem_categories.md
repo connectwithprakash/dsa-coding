@@ -57,7 +57,7 @@
 - [x] Copy Linked List with Random Pointer - `/linked_list/copy_linked_list_with_random_pointer.md`
 - [x] Add Two Numbers - `/linked_list/add_two_numbers.md`
 - [x] Find the Duplicate Number - `/linked_list/find_duplicate_number.md`
-- [ ] LRU Cache
+- [x] LRU Cache - `/linked_list/lru_cache.md`
 - [ ] Merge K Sorted Lists (Hard)
 - [ ] Reverse Nodes in K-Group (Hard)
 
