@@ -61,7 +61,7 @@
 
 ### Trees
 - [x] Invert Binary Tree - `/trees/invert_binary_tree.md`
-- [ ] Maximum Depth of Binary Tree
+- [x] Maximum Depth of Binary Tree - `/trees/maximum_depth_binary_tree.md`
 - [ ] Same Tree
 - [ ] Subtree of Another Tree
 - [ ] Lowest Common Ancestor of BST
