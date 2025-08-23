@@ -59,7 +59,7 @@
 - [x] Find the Duplicate Number - `/linked_list/find_duplicate_number.md`
 - [x] LRU Cache - `/linked_list/lru_cache.md`
 - [x] Merge K Sorted Lists (Hard) - `/linked_list/merge_k_sorted_lists.md`
-- [ ] Reverse Nodes in K-Group (Hard)
+- [x] Reverse Nodes in K-Group (Hard) - `/linked_list/reverse_nodes_in_k_group.md`
 
 #### Additional Problems (NeetCode 250)
 - [ ] Middle of the Linked List
