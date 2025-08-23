@@ -23,13 +23,9 @@ class Solution:
         if root is None:
             return
         
-        # Recursively invert left subtree
-        if root.left:
-            self.invertTree(root.left)
-        
-        # Recursively invert right subtree
-        if root.right:
-            self.invertTree(root.right)
+        # Recursively invert left and right subtrees
+        self.invertTree(root.left)
+        self.invertTree(root.right)
         
         # Swap the children at current node
         root.left, root.right = root.right, root.left
@@ -37,7 +33,7 @@ class Solution:
         return root
 ```
 
-## Alternative Solution - Cleaner Version
+## Alternative Solution - Pre-order Approach
 
 ```python
 class Solution:
@@ -203,7 +199,7 @@ root = TreeNode(1)
 
 4. **Symmetry of the problem** - Inverting twice returns the original tree
 
-5. **The None checks in my solution are redundant** - The base case handles None, so checking before recursion isn't necessary
+5. **Clean recursion** - The base case handles None, making additional checks unnecessary
 
 ## Common Mistakes
 
