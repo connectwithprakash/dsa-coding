@@ -60,7 +60,7 @@
 - [x] Reverse Nodes in K-Group (Hard) - `/linked_list/reverse_nodes_in_k_group.md`
 
 ### Trees
-- [ ] Invert Binary Tree
+- [x] Invert Binary Tree - `/trees/invert_binary_tree.md`
 - [ ] Maximum Depth of Binary Tree
 - [ ] Same Tree
 - [ ] Subtree of Another Tree
