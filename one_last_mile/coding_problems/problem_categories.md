@@ -65,7 +65,7 @@
 - [x] Diameter of Binary Tree - `/trees/diameter_of_binary_tree.md`
 - [x] Balanced Binary Tree - `/trees/balanced_binary_tree.md`
 - [x] Same Binary Tree - `/trees/same_binary_tree.md`
-- [ ] Subtree of Another Tree
+- [x] Subtree of Another Tree - `/trees/subtree_of_another_tree.md`
 - [ ] Lowest Common Ancestor of BST
 - [ ] Binary Tree Level Order Traversal
 - [ ] Binary Tree Right Side View
