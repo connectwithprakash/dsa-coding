@@ -70,7 +70,7 @@
 - [x] Binary Tree Level Order Traversal - `/trees/binary_tree_level_order_traversal.md`
 - [x] Binary Tree Right Side View - `/trees/binary_tree_right_side_view.md`
 - [x] Count Good Nodes in Binary Tree - `/trees/count_good_nodes_in_binary_tree.md`
-- [ ] Validate Binary Search Tree
+- [x] Validate Binary Search Tree - `/trees/validate_binary_search_tree.md`
 - [ ] Kth Smallest Element in a BST
 - [ ] Construct Binary Tree from Preorder and Inorder Traversal
 - [ ] Binary Tree Maximum Path Sum (Hard)
