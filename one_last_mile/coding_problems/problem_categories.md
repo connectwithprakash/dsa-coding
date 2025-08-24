@@ -66,7 +66,7 @@
 - [x] Balanced Binary Tree - `/trees/balanced_binary_tree.md`
 - [x] Same Binary Tree - `/trees/same_binary_tree.md`
 - [x] Subtree of Another Tree - `/trees/subtree_of_another_tree.md`
-- [ ] Lowest Common Ancestor of BST
+- [x] Lowest Common Ancestor in Binary Search Tree - `/trees/lowest_common_ancestor_in_binary_search_tree.md`
 - [ ] Binary Tree Level Order Traversal
 - [ ] Binary Tree Right Side View
 - [ ] Count Good Nodes in Binary Tree
