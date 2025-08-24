@@ -265,26 +265,4 @@ Similar problems:
 
 ## What I Learned
 
-● **Learn by Doing**
-
-**Context:** I've set up the right side view solution using level order traversal. The approach of taking the last element from each level works perfectly. Now we need to explore an interesting edge case.
-
-**Your Task:** In binary_tree_right_side_view.md, add a section analyzing what happens with a spiral-shaped tree. Look for TODO(human).
-
-**Guidance:** Consider a tree that alternates between having only left and only right children at each level. Draw out which nodes would be visible from the right side. Would the view alternate between sides? Think about how this demonstrates that "right side view" doesn't mean "only right children."
-
-```python
-# TODO(human): Analyze this spiral tree's right view
-#        1
-#       /
-#      2
-#       \
-#        3
-#       /
-#      4
-# What's the right side view? Why?
-```
-
----
-
 The solution effectively demonstrates problem decomposition - building complex solutions from simpler ones. Reusing level order traversal and taking the last element is straightforward and shows how understanding fundamental algorithms enables solving variations efficiently. The key insight that left children can be visible when there are no right children at that depth makes this more than just "follow the right path."

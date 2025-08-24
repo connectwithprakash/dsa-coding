@@ -239,14 +239,4 @@ Similar problems:
 
 ## What I Learned
 
-● **Learn by Doing**
-
-**Context:** I've set up the tree comparison logic that handles all the edge cases. The recursive structure is ready, but we need to decide on the comparison strategy for handling mismatches efficiently.
-
-**Your Task:** In same_tree.md, implement an optimization section that explores whether we should check values first or structure first for better performance. Look for TODO(human).
-
-**Guidance:** Consider the probability of value mismatches vs structural mismatches in typical use cases. Think about which check is cheaper and whether order matters for short-circuit evaluation. Your analysis should help readers understand the performance implications of check ordering.
-
----
-
 The solution effectively solves the tree comparison problem with minimal code. The combined condition `(p and not q) or (not p and q) or (p.val != q.val)` is particularly smart - it handles three different failure cases in one line. This shows that sometimes the most straightforward recursive approach is also the most concise.

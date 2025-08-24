@@ -253,21 +253,4 @@ Similar problems:
 
 ## What I Learned
 
-● **Learn by Doing**
-
-**Context:** I've set up both DFS and BFS solutions for level-order traversal. The DFS approach uses level tracking while BFS naturally processes level by level. Now we need to explore when each approach is better.
-
-**Your Task:** In binary_tree_level_order_traversal.md, implement a comparison section that analyzes memory usage. Look for TODO(human).
-
-**Guidance:** Consider the recursion stack depth for DFS vs queue size for BFS. Think about best and worst case scenarios (balanced vs skewed trees). Which approach uses less memory for a very wide tree? Which for a very deep tree?
-
-```python
-# TODO(human): Add memory comparison here
-# For a tree with height h and max width w:
-# DFS stack space: ?
-# BFS queue space: ?
-```
-
----
-
 The DFS solution with level tracking is efficient! The key fix was changing the condition to check when to create a new level. The insight that DFS can solve level-order problems by tracking depth shows great problem-solving flexibility. The choice between DFS and BFS often comes down to the specific tree shape and memory constraints.
