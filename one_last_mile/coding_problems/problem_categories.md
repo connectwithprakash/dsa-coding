@@ -73,7 +73,7 @@
 - [x] Validate Binary Search Tree - `/trees/validate_binary_search_tree.md`
 - [x] Kth Smallest Element in a BST - `/trees/kth_smallest_element_in_bst.md`
 - [x] Construct Binary Tree from Preorder and Inorder Traversal - `/trees/construct_binary_tree_from_preorder_and_inorder.md`
-- [ ] Binary Tree Maximum Path Sum (Hard)
+- [x] Binary Tree Maximum Path Sum (Hard) - `/trees/binary_tree_maximum_path_sum.md`
 - [ ] Serialize and Deserialize Binary Tree (Hard)
 
 ### Heap/Priority Queue
