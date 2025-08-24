@@ -63,10 +63,18 @@
 - [x] Invert Binary Tree - `/trees/invert_binary_tree.md`
 - [x] Maximum Depth of Binary Tree - `/trees/maximum_depth_binary_tree.md`
 - [x] Diameter of Binary Tree - `/trees/diameter_of_binary_tree.md`
+- [x] Balanced Binary Tree - `/trees/balanced_binary_tree.md`
 - [ ] Same Tree
 - [ ] Subtree of Another Tree
 - [ ] Lowest Common Ancestor of BST
 - [ ] Binary Tree Level Order Traversal
+- [ ] Binary Tree Right Side View
+- [ ] Count Good Nodes in Binary Tree
+- [ ] Validate Binary Search Tree
+- [ ] Kth Smallest Element in a BST
+- [ ] Construct Binary Tree from Preorder and Inorder Traversal
+- [ ] Binary Tree Maximum Path Sum (Hard)
+- [ ] Serialize and Deserialize Binary Tree (Hard)
 
 ### Heap/Priority Queue
 - [ ] Kth Largest Element in an Array
