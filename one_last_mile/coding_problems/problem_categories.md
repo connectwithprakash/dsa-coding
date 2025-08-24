@@ -67,7 +67,7 @@
 - [x] Same Binary Tree - `/trees/same_binary_tree.md`
 - [x] Subtree of Another Tree - `/trees/subtree_of_another_tree.md`
 - [x] Lowest Common Ancestor in Binary Search Tree - `/trees/lowest_common_ancestor_in_binary_search_tree.md`
-- [ ] Binary Tree Level Order Traversal
+- [x] Binary Tree Level Order Traversal - `/trees/binary_tree_level_order_traversal.md`
 - [ ] Binary Tree Right Side View
 - [ ] Count Good Nodes in Binary Tree
 - [ ] Validate Binary Search Tree
