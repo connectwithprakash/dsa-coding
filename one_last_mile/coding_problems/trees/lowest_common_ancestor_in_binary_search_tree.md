@@ -224,7 +224,7 @@ Similar problems:
 
 3. **No need to find nodes** - Just compare values and navigate
 
-4. **Iterative is cleaner** - BST problems often have elegant iterative solutions
+4. **Iterative is cleaner** - BST problems often have simple iterative solutions
 
 5. **Swapping simplifies** - Ensuring p ≤ q reduces cases to handle
 

@@ -230,7 +230,7 @@ Similar problems:
 
 1. **Height vs Diameter** - Height helps calculate diameter, but they're different metrics
 
-2. **Global maximum pattern** - Class variable elegantly tracks the best answer seen
+2. **Global maximum pattern** - Class variable efficiently tracks the best answer seen
 
 3. **Single traversal sufficiency** - No need to compute diameter separately at each node
 
@@ -240,4 +240,4 @@ Similar problems:
 
 ## What I Learned
 
-The solution elegantly solves a tricky problem where the answer isn't necessarily at the root. The pattern of computing one value (height) while tracking another (diameter) is powerful and appears in many tree problems. Using a class variable to track the global maximum during recursion is cleaner than passing it as a parameter or returning tuples. The key insight that diameter = left_height + right_height makes the solution surprisingly simple once understood.
+The solution effectively solves a tricky problem where the answer isn't necessarily at the root. The pattern of computing one value (height) while tracking another (diameter) is powerful and appears in many tree problems. Using a class variable to track the global maximum during recursion is cleaner than passing it as a parameter or returning tuples. The key insight that diameter = left_height + right_height makes the solution surprisingly simple once understood.

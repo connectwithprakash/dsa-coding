@@ -277,8 +277,8 @@ Both approaches work, but yours potentially saves function calls.
 
 4. **Value as filter** - Checking values first can optimize tree comparisons
 
-5. **Recursive elegance** - The main function is remarkably concise
+5. **Recursive simplicity** - The main function is remarkably concise
 
 ## What I Learned
 
-The solution beautifully demonstrates problem composition - using `isSameTree` as a black box to solve a more complex problem. The critical insight is continuing the search even after a failed match when values are equal, because the actual subtree might be deeper. The OR chain elegantly handles the "found anywhere" requirement. This pattern of building on previous solutions is common in tree problems and shows good problem-solving methodology.
+The solution effectively demonstrates problem composition - using `isSameTree` as a black box to solve a more complex problem. The critical insight is continuing the search even after a failed match when values are equal, because the actual subtree might be deeper. The OR chain cleanly handles the "found anywhere" requirement. This pattern of building on previous solutions is common in tree problems and shows good problem-solving methodology.

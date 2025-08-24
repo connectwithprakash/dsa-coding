@@ -116,7 +116,7 @@ Natural level grouping: [[1], [2,3], [4,5]]
 
 ## Why This Works
 
-The DFS approach cleverly:
+The DFS approach effectively:
 1. **Tracks depth**: Passing level parameter maintains current depth
 2. **Dynamic list creation**: Creates new level lists as needed
 3. **In-order preservation**: Left-first traversal maintains left-to-right order
@@ -270,4 +270,4 @@ Similar problems:
 
 ---
 
-The DFS solution with level tracking is elegant! The key fix was changing the condition to check when to create a new level. The insight that DFS can solve level-order problems by tracking depth shows great problem-solving flexibility. The choice between DFS and BFS often comes down to the specific tree shape and memory constraints.
+The DFS solution with level tracking is efficient! The key fix was changing the condition to check when to create a new level. The insight that DFS can solve level-order problems by tracking depth shows great problem-solving flexibility. The choice between DFS and BFS often comes down to the specific tree shape and memory constraints.

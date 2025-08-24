@@ -146,7 +146,7 @@ Take last element of each level!
 The solution leverages the fact that:
 1. **Level order traversal** visits all nodes at each depth
 2. **Left-to-right traversal** ensures the rightmost node is last
-3. **List comprehension** elegantly extracts the last element
+3. **List comprehension** cleanly extracts the last element
 
 The beauty is in reusing existing solutions - level order traversal becomes right side view with a simple transformation.
 
@@ -287,4 +287,4 @@ Similar problems:
 
 ---
 
-The solution beautifully demonstrates problem decomposition - building complex solutions from simpler ones. Reusing level order traversal and taking the last element is elegant and shows how understanding fundamental algorithms enables solving variations efficiently. The key insight that left children can be visible when there are no right children at that depth makes this more than just "follow the right path."
+The solution effectively demonstrates problem decomposition - building complex solutions from simpler ones. Reusing level order traversal and taking the last element is straightforward and shows how understanding fundamental algorithms enables solving variations efficiently. The key insight that left children can be visible when there are no right children at that depth makes this more than just "follow the right path."

@@ -265,4 +265,4 @@ Similar problems:
 
 ## What I Learned
 
-The inorder traversal approach elegantly validates BSTs by leveraging their fundamental property - sorted traversal order. The optimization from storing all values to checking on-the-fly shows good space complexity awareness. The alternative bounds-checking approach demonstrates that the same problem can be solved by thinking about constraints differently - either checking sorted order or validating bounds. Both approaches highlight the importance of understanding data structure properties.
+The inorder traversal approach effectively validates BSTs by leveraging their fundamental property - sorted traversal order. The optimization from storing all values to checking on-the-fly shows good space complexity awareness. The alternative bounds-checking approach demonstrates that the same problem can be solved by thinking about constraints differently - either checking sorted order or validating bounds. Both approaches highlight the importance of understanding data structure properties.

@@ -219,7 +219,7 @@ root = TreeNode(1)
 
 4. **Simplicity wins** - The recursive solution is cleaner than iterative alternatives
 
-5. **Natural recursion** - Tree problems often have elegant recursive solutions
+5. **Natural recursion** - Tree problems often have clean recursive solutions
 
 ## Common Mistakes
 
@@ -260,4 +260,4 @@ Similar problems:
 
 ## What I Learned
 
-The elegance of the solution shows how naturally recursion fits tree problems. The pattern of "process subtrees, then combine results" appears in many tree problems. Breaking down the depth calculation into clear steps (get left depth, get right depth, return 1 + max) makes the logic crystal clear. This problem is a perfect introduction to tree recursion - simple enough to understand but fundamental enough to build upon for more complex problems.
+The simplicity of the solution shows how naturally recursion fits tree problems. The pattern of "process subtrees, then combine results" appears in many tree problems. Breaking down the depth calculation into clear steps (get left depth, get right depth, return 1 + max) makes the logic crystal clear. This problem is a perfect introduction to tree recursion - simple enough to understand but fundamental enough to build upon for more complex problems.

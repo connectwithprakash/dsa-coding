@@ -122,7 +122,7 @@ The algorithm works because:
 2. **Update before check**: Updating max first simplifies the logic - if current node is the new max, it's automatically good
 3. **Independent paths**: Each path from root is evaluated independently
 
-The clever part is that after `max_val = max(node.val, max_val)`:
+The smart part is that after `max_val = max(node.val, max_val)`:
 - If `node.val` was already less than `max_val`, it remains less (not good)
 - If `node.val` was greater or equal, it becomes the new max and equals it (good)
 
@@ -228,4 +228,4 @@ Similar problems:
 
 ## What I Learned
 
-The solution elegantly tracks the path maximum using DFS parameter passing. The insight that updating max before checking simplifies the logic is clever - it unifies the "equals max" and "exceeds max" cases. This pattern of maintaining path-specific state through recursion parameters is common in tree problems and avoids the need for backtracking or path arrays.
+The solution effectively tracks the path maximum using DFS parameter passing. The insight that updating max before checking simplifies the logic is thoughtful - it unifies the "equals max" and "exceeds max" cases. This pattern of maintaining path-specific state through recursion parameters is common in tree problems and avoids the need for backtracking or path arrays.
