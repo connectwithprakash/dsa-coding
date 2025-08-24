@@ -135,7 +135,7 @@ Even though first 4 doesn't match the pattern,
 we must continue to find the second 4 which does!
 ```
 
-## Why Your Solution Works
+## Why This Works
 
 The brilliance is in the logic flow:
 1. **Value matching as a filter**: Only run expensive `isSameTree` when values match
@@ -250,7 +250,7 @@ Similar problems:
 
 ## Optimization Discussion
 
-Your solution has a subtle optimization:
+The solution has a subtle optimization:
 ```python
 if node.val == subRoot.val:
     is_subtree = self.isSameTree(node, subRoot)
@@ -281,4 +281,4 @@ Both approaches work, but yours potentially saves function calls.
 
 ## What I Learned
 
-Your solution beautifully demonstrates problem composition - using `isSameTree` as a black box to solve a more complex problem. The critical insight is continuing the search even after a failed match when values are equal, because the actual subtree might be deeper. The OR chain elegantly handles the "found anywhere" requirement. This pattern of building on previous solutions is common in tree problems and shows good problem-solving methodology.
+The solution beautifully demonstrates problem composition - using `isSameTree` as a black box to solve a more complex problem. The critical insight is continuing the search even after a failed match when values are equal, because the actual subtree might be deeper. The OR chain elegantly handles the "found anywhere" requirement. This pattern of building on previous solutions is common in tree problems and shows good problem-solving methodology.

@@ -128,9 +128,9 @@ Therefore:
 - Otherwise: N is the LCA (split point)
 ```
 
-## Why Your Solution Works
+## Why This Works
 
-Your insight is perfect: the LCA in a BST is the node where paths to p and q diverge. By ensuring p ≤ q, you simplify the logic:
+The insight is perfect: the LCA in a BST is the node where paths to p and q diverge. By ensuring p ≤ q, the logic is simplified:
 1. If `p.val ≤ node.val ≤ q.val`: This is the split point
 2. If both are smaller: Search left
 3. If both are larger: Search right
@@ -230,4 +230,4 @@ Similar problems:
 
 ## What I Learned
 
-Your approach brilliantly uses the BST property - the LCA is simply where p and q diverge! The key was fixing the condition for "both on left side" to `q.val < node.val`. This problem shows how data structure properties (BST ordering) can dramatically simplify algorithms from O(n) to O(h).
+The approach brilliantly uses the BST property - the LCA is simply where p and q diverge! The key was fixing the condition for "both on left side" to `q.val < node.val`. This problem shows how data structure properties (BST ordering) can dramatically simplify algorithms from O(n) to O(h).

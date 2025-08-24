@@ -138,7 +138,7 @@ class Solution:
         return max_depth
 ```
 
-## Why Your Solution Works
+## Why This Works
 
 The recursive approach naturally follows the tree structure:
 1. **Base case**: Empty tree has depth 0
@@ -151,7 +151,7 @@ This is a post-order traversal where we:
 
 ## Complexity Analysis
 
-### Recursive Solution (Your Approach)
+### Recursive Solution
 - **Time Complexity:** O(n)
   - Visit every node exactly once
   - O(1) work per node (comparison and addition)
@@ -217,7 +217,7 @@ root = TreeNode(1)
 
 3. **Max operation** - Automatically handles unbalanced trees by taking the deeper path
 
-4. **Simplicity wins** - Your recursive solution is cleaner than iterative alternatives
+4. **Simplicity wins** - The recursive solution is cleaner than iterative alternatives
 
 5. **Natural recursion** - Tree problems often have elegant recursive solutions
 
@@ -260,4 +260,4 @@ Similar problems:
 
 ## What I Learned
 
-The elegance of your solution shows how naturally recursion fits tree problems. The pattern of "process subtrees, then combine results" appears in many tree problems. Breaking down the depth calculation into clear steps (get left depth, get right depth, return 1 + max) makes the logic crystal clear. This problem is a perfect introduction to tree recursion - simple enough to understand but fundamental enough to build upon for more complex problems.
+The elegance of the solution shows how naturally recursion fits tree problems. The pattern of "process subtrees, then combine results" appears in many tree problems. Breaking down the depth calculation into clear steps (get left depth, get right depth, return 1 + max) makes the logic crystal clear. This problem is a perfect introduction to tree recursion - simple enough to understand but fundamental enough to build upon for more complex problems.

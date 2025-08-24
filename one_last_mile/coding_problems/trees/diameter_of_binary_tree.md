@@ -104,7 +104,7 @@ We need BOTH values:
 - Height for parent's diameter calculation
 ```
 
-## Why Your Solution Works
+## Why This Works
 
 The brilliance is in tracking two different metrics:
 1. **Height** (returned): Used by parent nodes for their calculations
@@ -240,4 +240,4 @@ Similar problems:
 
 ## What I Learned
 
-Your solution elegantly solves a tricky problem where the answer isn't necessarily at the root. The pattern of computing one value (height) while tracking another (diameter) is powerful and appears in many tree problems. Using a class variable to track the global maximum during recursion is cleaner than passing it as a parameter or returning tuples. The key insight that diameter = left_height + right_height makes the solution surprisingly simple once you see it.
+The solution elegantly solves a tricky problem where the answer isn't necessarily at the root. The pattern of computing one value (height) while tracking another (diameter) is powerful and appears in many tree problems. Using a class variable to track the global maximum during recursion is cleaner than passing it as a parameter or returning tuples. The key insight that diameter = left_height + right_height makes the solution surprisingly simple once understood.

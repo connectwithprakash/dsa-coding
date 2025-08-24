@@ -97,9 +97,9 @@ Comparison flow:
 - Different values → False
 ```
 
-## Why Your Solution Works
+## Why This Works
 
-Your solution cleverly handles all cases in the condition check:
+The solution cleverly handles all cases in the condition check:
 1. **Both None**: Trees are same at this position
 2. **Structure mismatch**: `(p and not q) or (not p and q)` catches when only one is None
 3. **Value mismatch**: `p.val != q.val` catches different values
@@ -249,4 +249,4 @@ Similar problems:
 
 ---
 
-Your solution elegantly solves the tree comparison problem with minimal code. The combined condition `(p and not q) or (not p and q) or (p.val != q.val)` is particularly clever - it handles three different failure cases in one line. This shows that sometimes the most straightforward recursive approach is also the most elegant.
+The solution elegantly solves the tree comparison problem with minimal code. The combined condition `(p and not q) or (not p and q) or (p.val != q.val)` is particularly clever - it handles three different failure cases in one line. This shows that sometimes the most straightforward recursive approach is also the most elegant.

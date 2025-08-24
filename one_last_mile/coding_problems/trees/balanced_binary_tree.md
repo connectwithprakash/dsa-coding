@@ -130,9 +130,9 @@ Height: 1 + max(left_height, right_height)
 Global tracking: If ANY node fails, entire tree is unbalanced
 ```
 
-## Why Your Solution Works
+## Why This Works
 
-Your solution brilliantly reuses the pattern from the diameter problem:
+The solution brilliantly reuses the pattern from the diameter problem:
 1. **Height computation** - Needed for parent nodes
 2. **Balance tracking** - Global flag to track if any subtree is unbalanced
 3. **Single traversal** - Check all nodes in one pass
@@ -237,10 +237,10 @@ Similar problems:
 
 ## Optimization Discussion
 
-Your solution always traverses the entire tree. The alternative with early termination can stop as soon as imbalance is found:
+This solution always traverses the entire tree. The alternative with early termination can stop as soon as imbalance is found:
 
 ```python
-# Your approach: Always O(n)
+# This approach: Always O(n)
 - Continues even after finding imbalance
 - Simpler code, consistent performance
 
@@ -265,4 +265,4 @@ For interview settings, your approach is excellent - clean, easy to understand, 
 
 ## What I Learned
 
-Your solution shows excellent pattern recognition - you immediately saw this was similar to the diameter problem and applied the same technique. The pattern of computing one value (height) while tracking another condition (balance) is powerful and appears frequently. Using a class variable for the global state is cleaner than the -1 sentinel approach, though the latter can terminate early. This problem reinforces that tree properties often require checking every node, not just the root.
+The solution shows excellent pattern recognition - immediately seeing the similarity to the diameter problem and applying the same technique. The pattern of computing one value (height) while tracking another condition (balance) is powerful and appears frequently. Using a class variable for the global state is cleaner than the -1 sentinel approach, though the latter can terminate early. This problem reinforces that tree properties often require checking every node, not just the root.
