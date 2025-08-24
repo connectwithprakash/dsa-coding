@@ -64,7 +64,7 @@
 - [x] Maximum Depth of Binary Tree - `/trees/maximum_depth_binary_tree.md`
 - [x] Diameter of Binary Tree - `/trees/diameter_of_binary_tree.md`
 - [x] Balanced Binary Tree - `/trees/balanced_binary_tree.md`
-- [x] Same Binary Tree - `/trees/same_tree.md`
+- [x] Same Binary Tree - `/trees/same_binary_tree.md`
 - [ ] Subtree of Another Tree
 - [ ] Lowest Common Ancestor of BST
 - [ ] Binary Tree Level Order Traversal
