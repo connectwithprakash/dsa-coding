@@ -71,7 +71,7 @@
 - [x] Binary Tree Right Side View - `/trees/binary_tree_right_side_view.md`
 - [x] Count Good Nodes in Binary Tree - `/trees/count_good_nodes_in_binary_tree.md`
 - [x] Validate Binary Search Tree - `/trees/validate_binary_search_tree.md`
-- [ ] Kth Smallest Element in a BST
+- [x] Kth Smallest Element in a BST - `/trees/kth_smallest_element_in_bst.md`
 - [ ] Construct Binary Tree from Preorder and Inorder Traversal
 - [ ] Binary Tree Maximum Path Sum (Hard)
 - [ ] Serialize and Deserialize Binary Tree (Hard)
