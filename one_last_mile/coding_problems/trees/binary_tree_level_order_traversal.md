@@ -19,27 +19,27 @@ I used DFS with level tracking. As I traverse the tree, I keep track of the curr
 
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-        self.result = []
+        self.levels_result = []
         
-        def dfs(node, level):
+        def traverse_by_level(current_node, depth):
             # Check if we need to create a new level
-            if len(self.result) == level:
-                self.result.append([])
+            if len(self.levels_result) == depth:
+                self.levels_result.append([])
             
             # Add current node's value to its level
-            self.result[level].append(node.val)
+            self.levels_result[depth].append(current_node.val)
             
             # Traverse left subtree first (maintains left-to-right order)
-            if node.left:
-                dfs(node.left, level + 1)
+            if current_node.left:
+                traverse_by_level(current_node.left, depth + 1)
             # Then traverse right subtree
-            if node.right:
-                dfs(node.right, level + 1)
+            if current_node.right:
+                traverse_by_level(current_node.right, depth + 1)
         
         if root:
-            dfs(root, 0)  # Start at level 0
+            traverse_by_level(root, 0)  # Start at depth 0
         
-        return self.result
+        return self.levels_result
 ```
 
 ## Alternative BFS Solution (Classic Approach)
@@ -52,27 +52,27 @@ class Solution:
         if not root:
             return []
         
-        result = []
-        queue = deque([root])
+        all_levels = []
+        nodes_to_process = deque([root])
         
-        while queue:
-            level_size = len(queue)
-            current_level = []
+        while nodes_to_process:
+            current_level_size = len(nodes_to_process)
+            current_level_values = []
             
             # Process all nodes at current level
-            for _ in range(level_size):
-                node = queue.popleft()
-                current_level.append(node.val)
+            for _ in range(current_level_size):
+                current_node = nodes_to_process.popleft()
+                current_level_values.append(current_node.val)
                 
                 # Add children for next level
-                if node.left:
-                    queue.append(node.left)
-                if node.right:
-                    queue.append(node.right)
+                if current_node.left:
+                    nodes_to_process.append(current_node.left)
+                if current_node.right:
+                    nodes_to_process.append(current_node.right)
             
-            result.append(current_level)
+            all_levels.append(current_level_values)
         
-        return result
+        return all_levels
 ```
 
 ## Visual Intuition
