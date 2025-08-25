@@ -77,6 +77,7 @@
 - [x] Serialize and Deserialize Binary Tree (Hard) - `/trees/serialize_and_deserialize_binary_tree.md`
 
 ### Heap/Priority Queue
+- [x] Kth Largest Element in a Stream - `/heap_priority_queue/kth_largest_element_in_a_stream.md`
 - [ ] Kth Largest Element in an Array
 - [ ] K Closest Points to Origin
 - [ ] Task Scheduler
