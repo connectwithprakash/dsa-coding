@@ -81,7 +81,7 @@
 - [x] Last Stone Weight - `/heap_priority_queue/last_stone_weight.md`
 - [x] Kth Largest Element in an Array - `/heap_priority_queue/kth_largest_element_in_an_array.md`
 - [x] K Closest Points to Origin - `/heap_priority_queue/k_closest_points_to_origin.md`
-- [ ] Task Scheduler
+- [x] Task Scheduler - `/heap_priority_queue/task_scheduler.md`
 
 ### Backtracking
 - [ ] Subsets
