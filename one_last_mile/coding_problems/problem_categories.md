@@ -82,6 +82,7 @@
 - [x] Kth Largest Element in an Array - `/heap_priority_queue/kth_largest_element_in_an_array.md`
 - [x] K Closest Points to Origin - `/heap_priority_queue/k_closest_points_to_origin.md`
 - [x] Task Scheduler - `/heap_priority_queue/task_scheduler.md`
+- [x] Design Twitter - `/heap_priority_queue/design_twitter.md`
 
 ### Backtracking
 - [ ] Subsets
