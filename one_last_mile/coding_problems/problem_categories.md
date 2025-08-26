@@ -78,6 +78,7 @@
 
 ### Heap/Priority Queue
 - [x] Kth Largest Element in a Stream - `/heap_priority_queue/kth_largest_element_in_a_stream.md`
+- [x] Last Stone Weight - `/heap_priority_queue/last_stone_weight.md`
 - [ ] Kth Largest Element in an Array
 - [ ] K Closest Points to Origin
 - [ ] Task Scheduler
