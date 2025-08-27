@@ -83,6 +83,7 @@
 - [x] K Closest Points to Origin - `/heap_priority_queue/k_closest_points_to_origin.md`
 - [x] Task Scheduler - `/heap_priority_queue/task_scheduler.md`
 - [x] Design Twitter - `/heap_priority_queue/design_twitter.md`
+- [x] Find Median from Data Stream - `/heap_priority_queue/find_median_from_data_stream.md`
 
 ### Backtracking
 - [ ] Subsets
