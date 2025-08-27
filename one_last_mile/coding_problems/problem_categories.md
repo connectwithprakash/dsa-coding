@@ -87,7 +87,7 @@
 
 ### Backtracking
 - [x] Subsets - `/backtracking/subsets.md`
-- [ ] Combination Sum
+- [x] Combination Sum - `/backtracking/combination_sum.md`
 - [ ] Permutations
 - [ ] Word Search
 
