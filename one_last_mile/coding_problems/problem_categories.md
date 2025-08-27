@@ -86,7 +86,7 @@
 - [x] Find Median from Data Stream - `/heap_priority_queue/find_median_from_data_stream.md`
 
 ### Backtracking
-- [ ] Subsets
+- [x] Subsets - `/backtracking/subsets.md`
 - [ ] Combination Sum
 - [ ] Permutations
 - [ ] Word Search
