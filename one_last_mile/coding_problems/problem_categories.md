@@ -89,7 +89,7 @@
 - [x] Subsets - `/backtracking/subsets.md`
 - [x] Combination Sum - `/backtracking/combination_sum.md`
 - [x] Combination Sum II - `/backtracking/combination_sum_ii.md`
-- [ ] Permutations
+- [x] Permutations - `/backtracking/permutations.md`
 - [ ] Word Search
 
 ### Graphs
