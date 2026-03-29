@@ -1,0 +1,131 @@
+# EXPERIENCE SECTION - PLAIN TEXT (NO BOLD)
+# Copy each section below directly into application forms
+
+================================================
+INDUSTRY EXPERIENCE
+================================================
+
+---------------------------------------------------
+EXPERIENCE 1: Fetch Rewards
+---------------------------------------------------
+
+Company: Fetch Rewards
+Location: Seattle, WA
+Title: Machine Learning Engineer - AI Labs
+Dates: May 2024 - Present
+
+Responsibilities:
+- Developed and released internal alpha of multimodal shopping agent that answers shopping questions, plans personalized shopping lists, and maximizes offer value
+- Built production LangGraph multi-agent orchestrator with in-context learning, recovering $15M ARR through 32% full automation via LLM-as-a-Judge guardrails at 97% accuracy, human-in-the-loop routing, and continuous learning from corrections to boost catalog match rate by 3-5%
+- Developed 3-agent annotation workflow using LangGraph to replace double-annotation with human-LLM agreement system, reducing 2nd annotator workload by 60% while maintaining dataset quality through human tie-breaking on disagreement cases for product matching models
+- Developed RAG-based LLM solution to automatically flag incorrect product matches at 95% recall, streamlining quality team's review process to efficiently catch and correct brand mismatches in ML predictions
+
+---------------------------------------------------
+EXPERIENCE 2: Fusemachines Inc.
+---------------------------------------------------
+
+Company: Fusemachines Inc.
+Location: New York City, NY
+Title: Machine Learning Engineer
+Dates: Feb 2020 - May 2022
+
+Responsibilities:
+- Developed multimodal contrastive learning pipeline combining image and time-series data for sales forecasting of new products without historical data
+- Led efforts to build an ensemble model to classify fashion products into Kate Spade's four customer segments using computer vision and scipy optimize, achieving 62% accuracy
+- Developed an in-house recommendation system using Factorization Machine model, AWS EC2 and Lambda, achieving ranking metrics comparable to AWS's recommendation engine
+- Implemented Multi-Quantile RNN-based sales forecasting model for Coach fashion, reducing stock outs by 30%
+
+================================================
+ACADEMIC EXPERIENCE
+================================================
+
+---------------------------------------------------
+EXPERIENCE 3: NASA-IMPACT
+---------------------------------------------------
+
+Company: NASA-IMPACT
+Location: Huntsville, AL
+Title: Graduate Research Assistant
+Dates: Aug 2022 - May 2024
+
+Responsibilities:
+- Developed a hierarchical document classification baseline model for Earth Science, achieving 46% exact match accuracy across three hierarchical levels, enhancing document organization and retrieval
+
+---------------------------------------------------
+EXPERIENCE 4: Fusemachines Inc. (Teaching)
+---------------------------------------------------
+
+Company: Fusemachines Inc.
+Location: New York City, NY
+Title: Lecturer & Teaching Assistant
+Dates: Mar 2022 - Mar 2024
+
+Responsibilities:
+- Taught 50+ students in Data Science, covering Python, Git, REST API, SQL, LLM, and MLOps as part of the AI Fellowship Latin America 2023
+- Taught Computer Vision as a lecturer and assisted with Machine Learning and Deep Learning courses as a Teaching Assistant for the AI Fellowship Nepal in 2022
+
+================================================
+EDUCATION
+================================================
+
+---------------------------------------------------
+EDUCATION 1: University of Alabama in Huntsville
+---------------------------------------------------
+
+School: University of Alabama in Huntsville
+Location: Huntsville, AL
+Degree: Master of Science in Computer Science (Thesis)
+Dates: Aug 2022 - May 2024
+GPA: 4.0
+
+Relevant Courses: Deep Learning, Survey AI, Algorithm, Big Data Computing, Software Engineering
+Awards: Phi Kappa Phi Honor Society
+
+---------------------------------------------------
+EDUCATION 2: MITx on edX
+---------------------------------------------------
+
+School: MITx on edX
+Location: Online
+Degree: MicroMasters in Statistics and Data Science
+Dates: May 2020 - Aug 2021
+Grade: B
+
+Relevant Courses: Probability, Statistics, Machine Learning, Data Analysis
+
+================================================
+PROJECTS
+================================================
+
+---------------------------------------------------
+PROJECT 1: Spectral Unmixing using Machine Learning
+---------------------------------------------------
+
+Project Title: Spectral Unmixing using Machine Learning
+Dates: Mar 2023 - Oct 2023
+Description: A ML system for material characterization using spectral signal from Infrared (IR) spectroscopy.
+
+Details:
+- Developed an ML pipeline, including signal processing, feature engineering, and a multi-label neural network model, achieving over 95% F1 score for predicting material composition from spectral signatures across diverse datasets using Scikit-learn, Pytorch, and WandB for model tracking
+
+---------------------------------------------------
+PROJECT 2: Foxhound Security Solution
+---------------------------------------------------
+
+Project Title: Foxhound Security Solution
+Dates: Nov 2019 - Feb 2020
+Description: SaaS-based user's behavior anomaly detection and network event log analyzer built using distributed ML.
+
+Details:
+- Designed and developed an end-to-end continual machine learning system for anomaly detection and reasoning using Apache Spark for ETL and data analysis, an AutoEncoder architecture, and statistical analysis
+
+---------------------------------------------------
+PROJECT 3: Sound Source Localization
+---------------------------------------------------
+
+Project Title: Sound Source Localization
+Dates: Dec 2018 - Aug 2019
+Description: An 8-microphone cubical mesh that records the azimuth and elevation of an incoming sound source.
+
+Details:
+- Constructed a localization system using C++ with the GCC-PHAT algorithm and microphone mesh, and created denoising AutoEncoder model using Keras to denoise speech and achieved MAE of 1.5 degree in 3D localization

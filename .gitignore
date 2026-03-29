@@ -1,0 +1,18 @@
+# Private interview files and communications
+interviews_private/
+
+# MacOS system files
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# Temporary files
+*.tmp
+*.log
